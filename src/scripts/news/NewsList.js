@@ -1,0 +1,1 @@
+//author: Akiko Endo --purpose: to print news on DOM
