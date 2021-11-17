@@ -1,3 +1,9 @@
+import { updateMessage } from "./MessageDataProvider";
+import { MessageList } from "./MessageList";
+
+
+
+
 const eventHub = document.querySelector(".chat-list")
 
   eventHub.addEventListener("click", (eventObject) => {
@@ -17,3 +23,4 @@ const eventHub = document.querySelector(".chat-list")
 </section>
         `
     }
+});

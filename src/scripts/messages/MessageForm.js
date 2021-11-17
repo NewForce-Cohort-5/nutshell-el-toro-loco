@@ -1,7 +1,10 @@
+import { saveMessage } from "./MessageDataProvider";
+import { MessageList } from "./MessageList";
 
 
 
-const contentTarget = document.querySelector('.chat-form');
+
+const contentTarget = document.querySelector('body');
 
 
  
