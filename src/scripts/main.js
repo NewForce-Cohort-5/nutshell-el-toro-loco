@@ -1,7 +1,7 @@
 import { LoginForm } from "./auth/LoginForm.js"
 import { RegisterForm } from "./auth/RegisterForm.js"
 import { Nutshell } from "./Nutshell.js"
-
+import { newArticle, articleForm } from "./news/NewsForm.js"
 
 /*
     1. Check if the user is authenticated by looking in session storage for `activeUser`
@@ -20,3 +20,6 @@ if(!activeUser){
 } else {
     Nutshell()
 }
+
+newArticle()
+articleForm() 
