@@ -73,14 +73,17 @@ const articleToAddContentTarg = document.querySelector(".dashboard")
 articleToAddContentTarg.addEventListener("click", clickEvent => {
   if (clickEvent.target.id === "saveArticle"){
     console.log("you clicked")
+    const nowDate = new Date()
+    
             const articleToAdd = { 
                         // Key/value pairs here
                         userId:+sessionStorage.getItem("activeUser"),
                         url: document.querySelector("#newsUrl").value,
                         title:document.querySelector("#newsTitle").value,
-                        synopsis: document.querySelector("#newsSynopsis").value
-      
+                        synopsis: document.querySelector("#newsSynopsis").value,
+                        date: nowDate
  }
+ debugger
  console.log(articleToAdd)
       document.querySelector("#newsUrl").value = ""
       document.querySelector("#newsTitle").value = ""
