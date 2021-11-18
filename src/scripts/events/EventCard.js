@@ -5,7 +5,7 @@
 
 export const Event = (events) => {
     return `
-    <section id="--${users.userId}"> 
+    <section id="eventCard"> 
            <div class="event-identifier">${events.id}</div>
            <div class="event-name">${events.eventName}</div>
            <div class="event-date">${events.eventDate}</div>

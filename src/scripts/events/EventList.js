@@ -1,10 +1,8 @@
-import { getEvents, useEvents } from "./EventDataProvider";
-import { Event } from "./EventCard.js";
+import { getEvents, useEvents } from "../events/EventDataProvider.js";
+import { Event } from "../events/EventCard.js";
 
 
-
-
-const contentTarget = document.querySelector(".event-container")
+const contentTarget = document.querySelector(".event-list")
 
 export const EventList = () => {
     getEvents()
@@ -17,7 +15,6 @@ export const EventList = () => {
         allTheEvents.forEach((singleEvent) => {
 
             EventsHTML += Event(singleEvent);
-
         });
        
         contentTarget.innerHTML = 
