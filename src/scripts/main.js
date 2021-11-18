@@ -1,6 +1,8 @@
 import { LoginForm } from "./auth/LoginForm.js"
 import { RegisterForm } from "./auth/RegisterForm.js"
 import { Nutshell } from "./Nutshell.js"
+import { EventList } from "./events/EventList.js"
+import { EventForm } from "./events/EventForm.js"
 
 
 /*
@@ -12,6 +14,7 @@ import { Nutshell } from "./Nutshell.js"
 */
 
 
+
 const activeUser = sessionStorage.getItem("activeUser")
 
 if(!activeUser){
@@ -20,3 +23,6 @@ if(!activeUser){
 } else {
     Nutshell()
 }
+
+EventList()
+EventForm()
