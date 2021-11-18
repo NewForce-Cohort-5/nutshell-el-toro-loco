@@ -5,6 +5,9 @@ export const useMessage = () => {
 }
 
 
+
+
+
 export const getMessage = () => {
   return fetch('http://localhost:8088/messages')
       .then(response => response.json())
@@ -27,14 +30,14 @@ export const saveMessage = message => {
 
 
 
-// export const updateMessage = message => {
+export const updateMessage = message => {
 
-//     return fetch(`http://localhost:8088/messages/${message.id}`, {
-//         method: "PUT",
-//         headers: {
-//             "Content-Type": "application/json"
-//         },
-//         body: JSON.stringify(message)
-//     })
+    return fetch(`http://localhost:8088/messages/${message.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(message)
+    })
   
-//   }
+  }

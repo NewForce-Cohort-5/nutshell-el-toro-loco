@@ -6,3 +6,31 @@
     border-radius: 12px;
     font-size: 15px;
 }
+
+.chat-container {
+    float: right;
+    padding: 25px;
+    border: 1px solid black;
+}
+
+.message-card{
+    display: flex;
+    justify-content: space-between;
+}
+
+.chat-list {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 25px;
+    
+}
+.chat-form{
+    display: flex;
+    
+}
+.chat-text, .message-text {
+    margin-right: 10px; 
+}
+.message-edit{
+    margin-bottom: 10px;
+}

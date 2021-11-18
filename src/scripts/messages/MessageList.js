@@ -2,7 +2,7 @@
 //Purpose: Convert input message to HTML and print list to DOM
 
 import { Message } from "./MessageCard.js"
-import { getMessage, useMessage } from "./MessageDataProvider.js";
+import { getMessage, useMessage} from "./MessageDataProvider.js";
 import { MessageForm } from "./MessageForm.js";
 
 
@@ -16,15 +16,26 @@ export const MessageList = () => {
 getMessage()
 .then(() => {
 
+    
+    
+    let allMessages = useMessage();
+
     let chatHTML = '';
-    
-    const allMessages = useMessage();
 
 
     
-    allMessages.forEach(singleMessage => chatHTML += Message(singleMessage));
+    allMessages.forEach(singleMessage => {
+        // if(singleMessage.userId === +sessionStorage.activeUser)
+    chatHTML += Message(singleMessage)
 
 
-    contentTarget.innerHTML = `${chatHTML}`
-})
+    contentTarget.innerHTML = `
+    
+    
+    <article class="flexed-container">
+    ${chatHTML}
+    </article>
+    `
+});
+});
 }

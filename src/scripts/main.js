@@ -3,6 +3,8 @@ import { RegisterForm } from "./auth/RegisterForm.js"
 import { Nutshell } from "./Nutshell.js"
 import { EventList } from "./events/EventList.js"
 import { EventForm } from "./events/EventForm.js"
+import { MessageForm } from "./messages/MessageForm.js"
+import { MessageList } from "./messages/MessageList.js"
 
 
 /*
@@ -26,3 +28,5 @@ if(!activeUser){
 
 EventList()
 EventForm()
+MessageList();
+MessageForm();

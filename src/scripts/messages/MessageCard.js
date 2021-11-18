@@ -2,29 +2,30 @@
 //Purpose: Create a message component with event listener for events
 
 
-// import { updateMessage } from "./MessageDataProvider.js";
-import { MessageList } from "./MessageList.js";
+import { MessageEditForm } from "./MessageEditForm.js";
 
 
 
 
-// const eventHub = document.querySelector(".chat-list")
 
-//   eventHub.addEventListener("click", (eventObject) => {
 
-//     const chatId = eventObject.target.id.split("--")[1];
 
-//     if (eventObject.target.id.startsWith("editChat")) {
-//       console.log("hello world")
-//     //  NoteEditForm(chatId);
-//     }
 
-    export const Message = message => {
+
+
+    export const Message = (message) => {
         return `
         <section class="message-card">
-<div class="message-text">${message.userId}: ${message.message}</div>+
-<button class="message-edit id="editChat">modify</button>
+<div class="message-text"><b>Anon:</b> <em>${message.message}</em></div>
+<button class="message-edit btn btn-primary" id="editChat">modify</button>
 </section>
         `
     }
-// });
+
+    const eventHub = document.querySelector(".chat-list")
+    eventHub.addEventListener("click", e => {
+        if (e.target.id.startsWith("editChat")) {
+        const chatId = +e.target.id.split("--")[1]
+        MessageEditForm(chatId);
+        }}
+        )

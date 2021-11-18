@@ -6,35 +6,47 @@ import { getMessage, saveMessage, useMessage } from "./MessageDataProvider.js";
 import { MessageList } from "./MessageList.js";
 
 
+// var button = document.getElementById("chat-send");
+// var messages = document.getElementById("chat-text");
+// var textBox = document.getElementById("chat-list");
+
+// button.addEventListener("click", function() {
+//   var newChat = document.createElement("li");
+//   newChat.innerHTML = textBox.value;
+//   messages.appendChild(newChat);
+//   textBox.value=""; 
+  
+// })
 
 
-
-const contentTarget = document.querySelector('.chat-list');
+const contentTarget = document.querySelector('.chat-form');
 
 
  
-contentTarget.addEventListener("click", event => {
+document.querySelector("body").addEventListener("click", event => {
   if (event.target.id === "sendMessage") {
-    // console.log('hello
+    // console.log('hello')
 
-    event.preventDefault();
+    // event.preventDefault();
 
     // Convert the date from it's default value
     
     const newChat = {
-      name: document.querySelector('#message-name').value,
-      text: document.querySelector('#message-text').value,
+      message: document.querySelector('#chat-text').value,
+      // userId: +sessionStorage.activeUser
+      // userId: parseInt (sessionStorage.setItem('#activeUser').value)
     }
 
+    console.log(newChat)
+
     // Clear form values after creating form body data
-    document.querySelector('#message-name').value = '';
-    document.querySelector('#message-text').value = '';
+    document.querySelector('#chat-text').value = '';
 
 
 
     // If any of the form values are empty then display where valid information is needed
-    if (newChat.name === 'Invalid Date' ||  newChat.text === '') {
-      alert('Please enter name and/or message')
+    if ( newChat.message === '') {
+      alert('Please enter message')
 
     // Otherwise we can go ahead and make this a new note
     } else {
@@ -48,38 +60,35 @@ contentTarget.addEventListener("click", event => {
 });
 
 
-const openChat = () => {
-  document.getElementById('chat-box').style.display='block';
-  $('.chat-button').hide()
-}
 
-const closeChat = () => {
-  document.getElementById('chat-box').style.display='none';
-  $('.chat-button').show()
-}
 
 
 
 export const MessageForm = () => {
-  return getMessage()
-  .then(() =>{
-    contentTarget.innerHTML += `
-        <section class="message-container">
-        <button type="button" class="chat-button" onclick="${openChat()}">Chat</button>
-            
-        
-        <div class="chat-box" id="chat-box">
-        <h2>Message</h2>
-        <form class="form-container">
-            <textarea id="message-text" type="text" placeholder="New message.." required=""></textarea>
-            <button type="submit" id="sendMessage">Send</button>
-            <button type="button" onclick="${closeChat()}">Close</button>
-            </form>
-            </div>
-        </section>
+
+  // const openChat = () => {
+  //   document.getElementById('chat-box').style.display='block';
+  //   $('.chat-button').hide()
+  // }
+  
+  // const closeChat = () => {
+  //   document.getElementById('chat-box').style.display='none';
+  //   $('.chat-button').show()
+  // }
+  
+
+  
+  
+    contentTarget.innerHTML =  `
+    <section class="chat-form">
+    <textarea type="textarea" id="chat-text" class="chat-text" placeholder="enter message.."></textarea>
+    <button id="sendMessage" class="btn btn-primary">Send</button>
+    </section>
     `
-  })
-}
+  }
+
+  
+
 
 
  
