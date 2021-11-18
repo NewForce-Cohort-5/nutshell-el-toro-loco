@@ -1,9 +1,10 @@
 //Author: Nick
-//Purpose: Make a form to enter new tasks
+//Purpose: Make a form to enter new tasks and function to save new tasks.
 
 import { saveTask, getTasks, useTasks } from "./TaskDataProvider.js";
+import { taskList } from "./TaskList.js";
 
-const contentTarget = document.querySelector(".event-form")
+const contentTarget = document.querySelector(".task-form")
 
 export const taskForm = () => {
     
@@ -30,13 +31,13 @@ export const taskForm = () => {
             <textarea name="" id="taskDetails" cols="30" rows="10" placeholder="Details"></textarea>
             </div>
     
-            <div action="addDate" class="addDate">Complete by:
-                    <input type="Date" name="Date" id="Date">        
+            <div action="addDate" class="taskDate">Complete by:
+                    <input type="Date" name="Date" id="taskDate">        
             </div>
     
         </form>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save</button>
+        <button id="saveTaskButton" type="button" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>        
       </div>
     
@@ -46,4 +47,27 @@ export const taskForm = () => {
 </div>
     
     `
+
+
 }
+
+//Click event to save new task
+contentTarget.addEventListener("click", clickEvent => {
+  if (clickEvent.target.id === "saveTaskButton") {
+
+    //Make a new object representation of the task
+    const newTask = {
+      //Key value pairs here
+      //Add + to id to make it a number
+      userId: 1,      
+      taskName: document.querySelector(`#taskDate`).value,
+      taskDetail: document.querySelector(`#taskDetails`).value,
+      completeBy: document.querySelector(`#taskDate`).value,
+      complete: false
+    }
+    saveTask(newTask)
+    .then(taskList)
+  }
+})
+
+//userId: +sessionStorage.getItem("activeUser"),
