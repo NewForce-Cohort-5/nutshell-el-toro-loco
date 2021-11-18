@@ -1,4 +1,7 @@
-//author: Akiko Endo --purpose: to a save form 
+//author: Akiko Endo --purpose: to print a new-article-button and if a user clicks the button, the info input field will be displayed.  And save data in the field into the database when the user clicked the save button in the input field.
+
+import {saveNews} from "./NewsDataProvider.js"
+
 const newArticleContentTarg = document.querySelector(".news-form") 
 
 export const newArticle = () => {
@@ -33,7 +36,7 @@ newArticleContentTarg.innerHTML = `
 <div class="modal fade" id="eateriesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header">Add Task</div>
+      <div class="modal-header">Add News</div>
         <div class="modal-body">
         <form class="newsForm">
             
@@ -51,7 +54,7 @@ newArticleContentTarg.innerHTML = `
     
         </form>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary"  id="saveArticle">Save this article</button>
+        <button type="button" class="btn btn-primary"  id="saveArticle" data-bs-dismiss="modal">Save this article</button>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>        
       </div>
     
@@ -65,12 +68,12 @@ newArticleContentTarg.innerHTML = `
 }
 
 //below is a function to send the new data to the JSON server
+const articleToAddContentTarg = document.querySelector(".dashboard") 
 
-newArticleContentTarg.addEventListener("click", clickEvent => {
+articleToAddContentTarg.addEventListener("click", clickEvent => {
   if (clickEvent.target.id === "saveArticle"){
     console.log("you clicked")
-
-      const articleToAdd = { 
+            const articleToAdd = { 
                         // Key/value pairs here
                         userId:+sessionStorage.getItem("activeUser"),
                         url: document.querySelector("#newsUrl").value,
@@ -83,7 +86,7 @@ newArticleContentTarg.addEventListener("click", clickEvent => {
       document.querySelector("#newsTitle").value = ""
       document.querySelector("#newsSynopsis").value = ""
 
- saveNewses(articleToAdd)
- .then(NewsList)
+ saveNews(articleToAdd)
+ //.then(NewsList)
 
 }                })
