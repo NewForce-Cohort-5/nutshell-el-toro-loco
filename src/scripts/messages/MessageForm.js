@@ -1,10 +1,15 @@
-import { saveMessage } from "./MessageDataProvider";
-import { MessageList } from "./MessageList";
+//Author: Jordan
+//Purpose: Make a form to enter new message
+
+
+import { getMessage, saveMessage, useMessage } from "./MessageDataProvider.js";
+import { MessageList } from "./MessageList.js";
 
 
 
 
-const contentTarget = document.querySelector('body');
+
+const contentTarget = document.querySelector('.chat-list');
 
 
  
@@ -43,20 +48,38 @@ contentTarget.addEventListener("click", event => {
 });
 
 
-
-
-
-
-const render = () => {
-    contentTarget.innerHTML += `
-        <section class="message-container">
-            <input id="message__name" type="text" placeholder="Enter Name..">
-            <input id="message__text" type="text" placeholder="New message..">
-            <button id="sendMessage">Send</button>
-        </section>
-    `
+const openChat = () => {
+  document.getElementById('chat-box').style.display='block';
+  $('.chat-button').hide()
 }
+
+const closeChat = () => {
+  document.getElementById('chat-box').style.display='none';
+  $('.chat-button').show()
+}
+
+
 
 export const MessageForm = () => {
-    render()
+  return getMessage()
+  .then(() =>{
+    contentTarget.innerHTML += `
+        <section class="message-container">
+        <button type="button" class="chat-button" onclick="${openChat()}">Chat</button>
+            
+        
+        <div class="chat-box" id="chat-box">
+        <h2>Message</h2>
+        <form class="form-container">
+            <textarea id="message-text" type="text" placeholder="New message.." required=""></textarea>
+            <button type="submit" id="sendMessage">Send</button>
+            <button type="button" onclick="${closeChat()}">Close</button>
+            </form>
+            </div>
+        </section>
+    `
+  })
 }
+
+
+ 

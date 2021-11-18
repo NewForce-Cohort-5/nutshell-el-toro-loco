@@ -1,26 +1,28 @@
+//Author: Jordan
+//Purpose: Convert input message to HTML and print list to DOM
+
 import { Message } from "./MessageCard.js"
-import { getMessage, useMessage } from "./MessageDataProvider";
-import { MessageForm } from "./MessageForm";
+import { getMessage, useMessage } from "./MessageDataProvider.js";
+import { MessageForm } from "./MessageForm.js";
 
 
 
-const contentTarget = document.querySelector(`.chat-list`);
+const contentTarget = document.querySelector('.chat-list');
 
 
 
 export const MessageList = () => {
-    let chatHTML = '';
+    
 getMessage()
 .then(() => {
 
+    let chatHTML = '';
+    
     const allMessages = useMessage();
 
-    chatHTML += `
-    <section class=chat>
-    <h2>Chat</h2>
-    <div class ="chat-body>`
+
     
-    allMessages.forEach(singMessage => chatHTML += Message(singMessage));
+    allMessages.forEach(singleMessage => chatHTML += Message(singleMessage));
 
 
     contentTarget.innerHTML = `${chatHTML}`
