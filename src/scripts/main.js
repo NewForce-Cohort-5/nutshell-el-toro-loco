@@ -1,7 +1,7 @@
 import { LoginForm } from "./auth/LoginForm.js"
 import { RegisterForm } from "./auth/RegisterForm.js"
 import { Nutshell } from "./Nutshell.js"
-import { NewsList } from "./news/NewsList.js"
+
 
 /*
     1. Check if the user is authenticated by looking in session storage for `activeUser`
@@ -26,4 +26,4 @@ let nowDate = new Date();
     console.dir(nowDate)
     console.log(nowDate.toDateString())
 
-    //NewsList()
+ 
