@@ -1,19 +1,22 @@
 
 
-export const Task = (singleTask) => {
+export const Task = (task) => {
     `
     <div class="taskTag">
-  <div class="taskName">${singleTask.taskName}</div>
-  <div class="taskDetails">${singleTask.taskDetail}</div>
-  <div class="taskComplete">${singleTask.completedBy}</div>
+  <div class="taskName">${task.taskName}</div>
+  <div class="taskDetails">${task.taskDetail}</div>
+  <div class="taskComplete">${task.completeBy}</div>
   
-  ${singleTask.complete ?
-    `<p class="complete"></p>`
-    :
-    `<p class="incomplete"></p>`
-    }
-
-    <button id="edit--${singleTask.id}">Edit</button>
+ <button id="edit--${task.id}">Edit</button>
+    
 </div>
 `
 }
+
+
+
+// ${singleTask.complete ?
+//     `<p class="complete"></p>`
+//     :
+//     `<p class="incomplete"></p>`
+    // }

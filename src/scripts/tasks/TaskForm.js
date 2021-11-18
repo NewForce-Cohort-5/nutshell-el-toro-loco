@@ -3,10 +3,11 @@
 
 import { saveTask, getTasks, useTasks } from "./TaskDataProvider.js";
 
-const contentTarget = document.querySelector("")
+const contentTarget = document.querySelector(".event-form")
 
 export const taskForm = () => {
-    contentTarget.innerHTML = `
+    
+  contentTarget.innerHTML = `
     
     
 <!-- Button trigger modal -->

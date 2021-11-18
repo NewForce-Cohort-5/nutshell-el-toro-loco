@@ -10,7 +10,7 @@ export const getTasks = () => {
     return fetch('http://localhost:8088/tasks')
         .then(dirtyTask => dirtyTask.json())
         .then(cleanTask => {
-            notesArray = cleanTask
+            taskArray = cleanTask
         })
 }
 
