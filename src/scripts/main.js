@@ -2,6 +2,8 @@ import { LoginForm } from "./auth/LoginForm.js"
 import { RegisterForm } from "./auth/RegisterForm.js"
 import { Nutshell } from "./Nutshell.js"
 import { taskList } from "./Tasks/TaskList.js"
+import { EventList } from "./events/EventList.js"
+import { EventForm } from "./events/EventForm.js"
 
 
 /*
@@ -11,6 +13,7 @@ import { taskList } from "./Tasks/TaskList.js"
     4. Also, if the user authenticates, and the login form is initially shown
         ensure that the Nutshell component gets rendered
 */
+
 
 
 const activeUser = sessionStorage.getItem("activeUser")
@@ -23,3 +26,5 @@ if(!activeUser){
 }
 
 taskList()
+EventList()
+EventForm()
