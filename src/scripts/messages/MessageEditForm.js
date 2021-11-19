@@ -1,6 +1,6 @@
 import { getUsers, useUsers } from "../users/UsersDataProvider.js";
-import { useMessage, getMessage,  } from "./MessageDataProvider.js";
-import { MessageList } from "./MessageList.js";
+import { Message } from "./MessageCard.js";
+import { useMessage, getMessage, updateMessage,  } from "./MessageDataProvider.js";
 
 
 export const MessageEditForm = (chatId) => {
@@ -15,9 +15,8 @@ export const MessageEditForm = (chatId) => {
 
     contentTarget.innerHTML = `
     <section class="edit-chat-container">
-    <h3>Edit Message</h3>
-    <input type="textarea" id="edit-chat-text" class="edit-chat-text" placeholder="enter message..">
-    <button id="sendEditedMessage">Send</button>
+    <textarea type="textarea" id="edit-chat-text" class="edit-chat-text" placeholder="edit message.."></textarea>
+    <button id="sendEditedMessage-${chatId}" class="btn btn-primary">Send</button>
     </section>
     `
 
@@ -27,7 +26,7 @@ export const MessageEditForm = (chatId) => {
 
             // new object representation
             const editedMessage = {
-                id: event.target.id.split('-')[1], // how can you get the note's id?
+                id: +e.target.id.split('-')[1], // how can you get the note's id?
                 message: document.querySelector('#edit-chat-text').value, // get value of text from input
             }
 
