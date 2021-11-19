@@ -9,7 +9,7 @@ export const EventList = () => {
     .then(() => {
 
         let allTheEvents = useEvents();
-        const eventsArraySortedByDate = allTheEvents.sort((a,b) => { return new Date(b.date) - new Date(a.date)})
+        const eventsArraySortedByDate = allTheEvents.sort((a,b) => { return new Date(a.eventDate) - new Date(b.eventDate)})
 
         let EventsHTML = "";
         
@@ -21,7 +21,7 @@ export const EventList = () => {
         `
     <h3>Events</h3>
     
-    <p>${EventsHTML}</p>
+    <div class = "eventList"> ${EventsHTML} </div>
     ` 
     });
 };

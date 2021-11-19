@@ -1,5 +1,5 @@
 //Dummy data for json
-"tasks": [
+"tasks" [
     {
       "id": 1,
       "userId": 1,
@@ -47,4 +47,4 @@
       "completeBy": "2021-12-02",
       "complete": false,
       "id": 6
-    }
+    }]

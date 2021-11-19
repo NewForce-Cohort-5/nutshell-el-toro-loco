@@ -7,12 +7,12 @@
     font-size: 15px;
 }
 
-p:first-child {
+.eventCard:first-child {
     background-color: green;
     font-weight: bold;
     font-size: larger;
-
-.completedCSS {
+}
+/* .completedCSS {
     display: flex;
     gap: 10px;
-}
+} */
