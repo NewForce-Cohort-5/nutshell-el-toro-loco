@@ -1,4 +1,5 @@
-//author: Akiko Endo --purpose: to print news on DOM
+//author: Akiko Endo --purpose: 1.to print news on DOM, 2.to delete a specific news item
+ 
 import { useNews, getNews, saveNews } from "./NewsDataProvider.js"
 import { news } from "./NewsCard.js"
 import { articleForm } from "./NewsForm.js"
