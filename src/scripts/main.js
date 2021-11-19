@@ -1,6 +1,10 @@
 import { LoginForm } from "./auth/LoginForm.js"
 import { RegisterForm } from "./auth/RegisterForm.js"
 import { Nutshell } from "./Nutshell.js"
+import { taskList } from "./Tasks/TaskList.js"
+import { EventList } from "./events/EventList.js"
+import { EventForm } from "./events/EventForm.js"
+import { taskForm } from "./Tasks/TaskForm.js"
 
 
 /*
@@ -12,6 +16,7 @@ import { Nutshell } from "./Nutshell.js"
 */
 
 
+
 const activeUser = sessionStorage.getItem("activeUser")
 
 if(!activeUser){
@@ -21,9 +26,7 @@ if(!activeUser){
     Nutshell()
 }
 
- 
-
-
-
-
- 
+taskList()
+taskForm()
+EventList()
+EventForm()
