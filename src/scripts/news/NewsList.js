@@ -14,6 +14,7 @@ export const NewsList = () => {
         
         console.log(articlesArraySortedbyDate)
         let newsHTML = ""
+//this below, maybe we can use filter or map to find object.userID === activeUser
 
         articlesArraySortedbyDate.forEach((singleObj) => {
             newsHTML+= news(singleObj)

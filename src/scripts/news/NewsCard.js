@@ -10,8 +10,8 @@ export const news = (taco) =>  {
     <p><a href=${taco.url} target="_blank" rel="noopener noreferrer"> the article url </a></p>
     <p>Date of the article saved: ${new Date (taco.date).toLocaleDateString('en-US')}</p>
     <p>Summary: ${taco.synopsis}</p>
-    <button id="deleteNote--${taco.id}">Delete</button>
-    <button id="edit--${taco.id}">Edit</button>
+    <button id="deleteNote--${taco.id}" class="btn btn-primary">Delete</button>
+    <button id="edit--${taco.id}" class="btn btn-primary">Edit</button>
     </div>
         `
 }

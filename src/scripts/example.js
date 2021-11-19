@@ -17,7 +17,7 @@ numbers.sort((a, b) => b - a);
 console.log(numbers);
 //
 
-
+// how to print a month and a date
 const d = new Date();
 console.log(d, d.getDate(), d.getMonth())
 

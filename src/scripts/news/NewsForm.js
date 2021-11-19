@@ -90,6 +90,6 @@ articleToAddContentTarg.addEventListener("click", clickEvent => {
       document.querySelector("#newsSynopsis").value = ""
 
  saveNews(articleToAdd)
- //.then(NewsList)
+ .then(NewsList)
 
 }                })
