@@ -22,8 +22,8 @@ if(!activeUser){
 }
 
  
-let nowDate = new Date();
-    console.dir(nowDate)
-    console.log(nowDate.toDateString())
+
+
+
 
  

@@ -9,10 +9,13 @@ export const NewsList = () => {
     getNews ()
     .then (() => {
         let articlesArray = useNews ()
+        let articlesArraySortedbyDate = articlesArray.sort((a,b) => { return new Date(b.date) - new Date(a.date )})
+
         
+        console.log(articlesArraySortedbyDate)
         let newsHTML = ""
 
-        articlesArray.forEach((singleObj) => {
+        articlesArraySortedbyDate.forEach((singleObj) => {
             newsHTML+= news(singleObj)
         });
         
