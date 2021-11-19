@@ -5,6 +5,7 @@ import { getTasks, useTasks } from "./TaskDataProvider.js";
 import { Task } from "./TaskCard.js";
 import { completeTask } from "./TaskDataProvider.js";
 
+
 const contentTarget = document.querySelector(".task-list")
 
 export const taskList = () => {
@@ -16,9 +17,10 @@ export const taskList = () => {
         let taskHTML = ""
      
         allTheTasks.forEach((singleTask) => {
+            if (singleTask.complete === false) {
             taskHTML += Task(singleTask)
             
-        });
+        }})
         contentTarget.innerHTML = `
         ${taskHTML}
         `
@@ -33,5 +35,6 @@ contentTarget.addEventListener("change" , (eventObject) => {
         const checkedTask = eventObject.target.id.split("--")[1]
 
         completeTask(checkedTask)
+        .then(taskList)
     }
 })

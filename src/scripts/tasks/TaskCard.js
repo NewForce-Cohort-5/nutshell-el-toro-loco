@@ -9,7 +9,7 @@ export const Task = (task) => {
     <div class="taskComplete">Complete By: ${task.completeBy}</div>
     <div class="completedCSS">
     <div><label for="completed">Completed</label></div>
-    <div><input class="completeTask" type="checkbox" placeholder="completed" id="completeNote--${task.id}""></div>
+    <div><input class="completeTask" type="checkbox" placeholder="completed" id="completeNote--${task.id}"></div>
     </div>
  <button class="formButton" id="edit--${task.id}">Edit</button>
     
