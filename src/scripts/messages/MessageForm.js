@@ -33,7 +33,7 @@ document.querySelector("body").addEventListener("click", event => {
     
     const newChat = {
       message: document.querySelector('#chat-text').value,
-      // userId: +sessionStorage.activeUser
+      userId: +sessionStorage.activeUser
       // userId: parseInt (sessionStorage.setItem('#activeUser').value)
     }
 
@@ -64,7 +64,7 @@ document.querySelector("body").addEventListener("click", event => {
 
 
 
-export const MessageForm = () => {
+export const MessageForm = (usersArray) => {
 
   // const openChat = () => {
   //   document.getElementById('chat-box').style.display='block';

@@ -10,12 +10,13 @@ export const MessageEditForm = (chatId) => {
 // Give compenent access to app messages
 
     const alltheMessages = useMessage();
+    const usersArray = useUsers()
 
     const messageWeWantToEdit = alltheMessages.find(singleMessage => singleMessage.id === chatId)
 
     contentTarget.innerHTML = `
     <section class="edit-chat-container">
-    <textarea type="textarea" id="edit-chat-text" class="edit-chat-text" placeholder="edit message.."></textarea>
+    <input type="textarea" id="edit-chat-text" class="edit-chat-text" value="${messageWeWantToEdit.message}" placeholder="edit message..">
     <button id="sendEditedMessage-${chatId}" class="btn btn-primary">Send</button>
     </section>
     `
@@ -28,6 +29,7 @@ export const MessageEditForm = (chatId) => {
             const editedMessage = {
                 id: +e.target.id.split('-')[1], // how can you get the note's id?
                 message: document.querySelector('#edit-chat-text').value, // get value of text from input
+                userId: +document.querySelector("#users-FK").value
             }
 
             console.log(editedMessage)

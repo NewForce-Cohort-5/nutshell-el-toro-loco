@@ -12,21 +12,31 @@
     padding: 5px 5px 25px 25px;
     border: 1px solid black;
     justify-content: space-between;
+    margin-bottom: 25px;
+    border-radius: 5px;
+   
     
 }
 
 .message-card{
     display: flex;
     justify-content: space-between;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+
+    
 }
 
 .chat-list {
-    display: flex;
-    justify-content: flex-end;
-    padding-bottom: 25px;
-    overflow-y: scroll;
-    height: 275px;
+    justify-content: baseline;
+    padding-bottom: 10px;
+    height: 250px;
     width: auto;
+    overflow-y: auto;
+    position: relative;
+  
+    
     
 }
 .chat-form, .edit-chat-container{
@@ -38,6 +48,7 @@
     margin-right: 10px; 
     border-radius: 5px;
     width: 275px;
+    
 }
 .message-edit{
     margin-bottom: 10px;

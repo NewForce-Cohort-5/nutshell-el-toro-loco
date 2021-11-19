@@ -13,10 +13,10 @@ import { MessageEditForm } from "./MessageEditForm.js";
 
 
 
-    export const Message = (message) => {
+    export const Message = (message, user) => {
         return `
         <section class="message-card">
-<div class="message-text"><b>Anon:</b> <em>${message.message}</em></div>
+<div class="message-text"><b>${user.email}:</b> <em>${message.message}</em></div>
 <button class="message-edit btn btn-primary" id="editChat-${message.id}">modify</button>
 </section>
         `
