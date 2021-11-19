@@ -2,6 +2,7 @@ import { getUsers, useUsers } from "../users/UsersDataProvider.js";
 import { Message } from "./MessageCard.js";
 import { useMessage, getMessage, updateMessage,  } from "./MessageDataProvider.js";
 import { MessageForm } from "./MessageForm.js";
+import { MessageList } from "./MessageList.js";
 
 
 export const MessageEditForm = (chatId) => {
@@ -19,18 +20,20 @@ export const MessageEditForm = (chatId) => {
         document.getElementById('edit-chat-form').reset();
     
     }
-    
+
     contentTarget.innerHTML = `
     <section class="edit-chat-form">
     <input type="textarea" id="edit-chat-text" value="${messageWeWantToEdit.message}"placeholder="edit message.."></textarea>
     <button id="sendEditedMessage-${chatId}" class="btn btn-primary">Send</button>
-    <button type="cance" class="btn btn-secondary" id=cancelButton-${chatId} onclick="${cancelButton}">Cancel</button>
+    <button type="cance" class="btn btn-secondary" id=cancelButton-${chatId}>Cancel</button>
     </section>
     `
     
     
     contentTarget.addEventListener("click", e => {
         if(e.target.id.startsWith("sendEditedMessage")){
+
+            confirm('Are you sure you want to send this edited message?')
 
 
             // new object representation
@@ -45,13 +48,17 @@ export const MessageEditForm = (chatId) => {
 
             if (editedMessage.message === ''){
             alert('Please enter valid input values')}
-            
+
             else{
 
                 // send to json-server and refresh the list
                 updateMessage(editedMessage).then(MessageList);
             }
             
+            // if (eventObject.target.id.startsWith("cancelButton")) {
+      
+            //     MessageList()
+            // }
 
         }
     })
