@@ -7,8 +7,12 @@
     font-size: 15px;
 }
 
-form:first-child {
+p:first-child {
     background-color: green;
     font-weight: bold;
     font-size: larger;
+
+.completedCSS {
+    display: flex;
+    gap: 10px;
 }
