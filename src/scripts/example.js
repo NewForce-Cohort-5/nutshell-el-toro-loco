@@ -21,4 +21,5 @@ console.log(numbers);
 const d = new Date();
 console.log(d, d.getDate(), d.getMonth())
 
-
+//this is how to sort out date
+// let articlesArraySortedbyDate = articlesArray.sort((a,b) => { return new Date(b.date) - new Date(a.date )})
