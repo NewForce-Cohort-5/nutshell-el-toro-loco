@@ -1,5 +1,5 @@
-
-
+import { EventEditForm } from "./EventEditForm.js"
+import { EventList } from "./EventList.js"
 
 //do i need two parameters here, one to get the events data and one to get the users id or will it be able to tie userid back to id?
 
@@ -13,3 +13,28 @@ export const Event = (events) => {
     </section>
     `
 }
+
+// const eventHub = document.querySelector("body")
+// eventHub.addEventListener("click", Object => {
+//     if (Object.target.id.startsWith("deleteNote")) {
+
+//         const idToDelete = Object.target.id.split("--")[1]
+    
+
+//         console.log(idToDelete)
+//         deleteNote (idToDelete)
+//         .then(NoteList)
+
+//     }
+// });
+
+
+
+const eventHub = document.querySelector("body")
+eventHub.addEventListener("click", (eventObject) => {
+    if(eventObject.target.id.startsWith("edit--")){
+        const eventId = +eventObject.target.id.split("--")[1]
+        EventEditForm(eventId);
+    }
+})
+

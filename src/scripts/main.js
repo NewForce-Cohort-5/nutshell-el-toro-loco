@@ -3,6 +3,7 @@ import { RegisterForm } from "./auth/RegisterForm.js"
 import { Nutshell } from "./Nutshell.js"
 import { EventList } from "./events/EventList.js"
 import { EventForm } from "./events/EventForm.js"
+import { EventEditForm } from "./events/EventEditForm.js"
 
 
 /*
@@ -26,3 +27,4 @@ if(!activeUser){
 
 EventList()
 EventForm()
+EventEditForm

@@ -9,18 +9,19 @@ export const EventList = () => {
     .then(() => {
 
         let allTheEvents = useEvents();
+        const eventsArraySortedByDate = allTheEvents.sort((a,b) => { return new Date(b.date) - new Date(a.date)})
 
         let EventsHTML = "";
-
-        allTheEvents.forEach((singleEvent) => {
-
+        
+        eventsArraySortedByDate.forEach((singleEvent) => {
             EventsHTML += Event(singleEvent);
         });
-       
+       //css selector first child
         contentTarget.innerHTML = 
         `
     <h3>Events</h3>
-    ${EventsHTML}
+    
+    <p>${EventsHTML}</p>
     ` 
     });
 };

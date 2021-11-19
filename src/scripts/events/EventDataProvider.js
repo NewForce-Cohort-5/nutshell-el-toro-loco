@@ -12,7 +12,7 @@ export const getEvents = () => {
         })
 }
 
-export const saveEvents = () => {
+export const saveEvents = (events) => {
     return fetch('http://localhost:8088/events', {
         method: "POST",
         headers: {

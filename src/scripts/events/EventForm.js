@@ -7,21 +7,23 @@ import { EventList } from "./EventList.js"
 
 
 const contentTarget = document.querySelector(".event-form")
+//sort then map
 
-
-document.querySelector("body").addEventListener("click", clickEvent => {
-    if (clickEvent.target.id === "saveEvent") {
+contentTarget.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id === "saveEvents") {
 
         const newEvent = {
-            eventName: document.querySelector("#eventName-text").value,
-            eventDate: document.querySelector("#eventDate-text").value,
-            eventLocation: document.querySelector("#eventLocation").value
-            //also need to save userid
+
+            eventName: document.querySelector("#eventName").value,
+            eventDate: document.querySelector("#eventDate").value,
+            eventLocation: document.querySelector("#eventLocation").value,
+            userId: 1
+            // +sessionStorage.getItem("activeUser")
         }
-        // console.log(newNote)
-        document.querySelector("#eventName-text").value = ""
-        document.querySelector("#eventDate-text").value = ""
-        document.querySelector("#eventLocation-text").value = ""
+        console.log(newEvent)
+        document.querySelector("#eventName").value = ""
+        document.querySelector("#eventDate").value = ""
+        document.querySelector("#eventLocation").value = ""
        
         saveEvents(newEvent)
         .then(EventList) // Refresh your list of events once you've saved your new one
@@ -51,12 +53,12 @@ export const EventForm = () => {
                  <textarea name="" id="eventLocation" placeholder="Enter the location of your event here"></textarea>
                  </div>
                  <div action="addDate" class="addDate">Select the date of your event
-                         <input type="Date" name="Date" id="Date">        
+                         <input type="Date" name="Date" id="eventDate">        
                  </div>
              </form>
            <div class="modal-footer">
-             <button type="button" class="btn btn-primary">Save Event</button>
-            
+             <button type="button" id="saveEvents" class="btn btn-primary" data-bs-dismiss="modal">Save Event</button>
+             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Edit Event</button>      
            </div>
        </div>
     </div>
@@ -66,10 +68,5 @@ export const EventForm = () => {
     })
 }
 
-{/* <section>
-        <H3 class="event-header">Please enter the details of your event here...</H3>
-        <input class="form-control" type="textarea" id="eventName-text" placeholder="Enter name of event here...">
-        <input class="form-control" type="date" id="eventDate-text">
-        <input class="form-control" type="textarea" id="eventLocation-text" placeholder="Enter the location of the event here...">
-        <button id="saveEvent">Save Event</button>
-    </section>  */}
+
+
