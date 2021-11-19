@@ -8,11 +8,13 @@ import { MessageForm } from "./MessageForm.js";
 
 
 
-const contentTarget = document.querySelector('.chat-list');
+
 
 
 
 export const MessageList = () => {
+    
+    const contentTarget = document.querySelector('.chat-list');
     
 getMessage()
 .then(getUsers)
@@ -32,13 +34,14 @@ getMessage()
         // if(singleMessage.userId === +sessionStorage.activeUser)
     chatHTML += Message(singleMessage, singleUser)
 
-
-    contentTarget.innerHTML = `
-    
-    <article>
-    ${chatHTML}
-    </article>
-    `
 });
+
+contentTarget.innerHTML = `
+    
+<article>
+${chatHTML}
+</article>
+`
+
 });
 }

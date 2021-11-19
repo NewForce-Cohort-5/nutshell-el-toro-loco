@@ -19,11 +19,12 @@ import { MessageList } from "./MessageList.js";
 // })
 
 
-const contentTarget = document.querySelector('.chat-form');
+
 
 
  
 document.querySelector("body").addEventListener("click", event => {
+ 
   if (event.target.id === "sendMessage") {
     // console.log('hello')
 
@@ -65,6 +66,7 @@ document.querySelector("body").addEventListener("click", event => {
 
 
 export const MessageForm = (usersArray) => {
+  const contentTarget = document.querySelector('.chat-form');
 
   // const openChat = () => {
   //   document.getElementById('chat-box').style.display='block';

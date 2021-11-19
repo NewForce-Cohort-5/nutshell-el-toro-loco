@@ -1,6 +1,7 @@
 import { getUsers, useUsers } from "../users/UsersDataProvider.js";
 import { Message } from "./MessageCard.js";
 import { useMessage, getMessage, updateMessage,  } from "./MessageDataProvider.js";
+import { MessageForm } from "./MessageForm.js";
 
 
 export const MessageEditForm = (chatId) => {
@@ -14,13 +15,20 @@ export const MessageEditForm = (chatId) => {
 
     const messageWeWantToEdit = alltheMessages.find(singleMessage => singleMessage.id === chatId)
 
+    const cancelButton = () => {
+        document.getElementById('edit-chat-form').reset();
+    
+    }
+    
     contentTarget.innerHTML = `
-    <section class="edit-chat-container">
-    <input type="textarea" id="edit-chat-text" class="edit-chat-text" value="${messageWeWantToEdit.message}" placeholder="edit message..">
+    <section class="edit-chat-form">
+    <input type="textarea" id="edit-chat-text" value="${messageWeWantToEdit.message}"placeholder="edit message.."></textarea>
     <button id="sendEditedMessage-${chatId}" class="btn btn-primary">Send</button>
+    <button type="cance" class="btn btn-secondary" id=cancelButton-${chatId} onclick="${cancelButton}">Cancel</button>
     </section>
     `
-
+    
+    
     contentTarget.addEventListener("click", e => {
         if(e.target.id.startsWith("sendEditedMessage")){
 
@@ -29,22 +37,24 @@ export const MessageEditForm = (chatId) => {
             const editedMessage = {
                 id: +e.target.id.split('-')[1], // how can you get the note's id?
                 message: document.querySelector('#edit-chat-text').value, // get value of text from input
-                userId: +document.querySelector("#users-FK").value
+                userId: +sessionStorage.activeUser
             }
-
             console.log(editedMessage)
 
             ;
 
             if (editedMessage.message === ''){
             alert('Please enter valid input values')}
+            
             else{
 
                 // send to json-server and refresh the list
                 updateMessage(editedMessage).then(MessageList);
             }
-
+            
 
         }
     })
+  
 }
+

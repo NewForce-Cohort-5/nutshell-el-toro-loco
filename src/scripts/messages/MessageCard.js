@@ -14,6 +14,7 @@ import { MessageEditForm } from "./MessageEditForm.js";
 
 
     export const Message = (message, user) => {
+
         return `
         <section class="message-card">
 <div class="message-text"><b>${user.email}:</b> <em>${message.message}</em></div>
@@ -22,8 +23,9 @@ import { MessageEditForm } from "./MessageEditForm.js";
         `
     }
 
-    const eventHub = document.querySelector(".chat-list")
+    const eventHub = document.querySelector("body")
     eventHub.addEventListener("click", e => {
+        
         if (e.target.id.startsWith("editChat")) {
         const chatId = +e.target.id.split("-")[1]
         MessageEditForm(chatId);
