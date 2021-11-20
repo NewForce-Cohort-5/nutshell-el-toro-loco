@@ -4,10 +4,11 @@ import { useNews, getNews, saveNews } from "./NewsDataProvider.js"
 import { news } from "./NewsCard.js"
 import { articleForm } from "./NewsForm.js"
 
-const listContentTarget = document.querySelector(".news-list")
 
 export const NewsList = () => {
-    getNews ()
+    const listContentTarget = document.querySelector(".news-list")
+    
+getNews ()
     .then (() => {
         let articlesArray = useNews ()
         let articlesArraySortedbyDate = articlesArray.sort((a,b) => { return new Date(b.date) - new Date(a.date )})

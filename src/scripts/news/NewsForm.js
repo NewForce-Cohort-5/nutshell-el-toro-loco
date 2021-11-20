@@ -2,10 +2,10 @@
 
 import {saveNews} from "./NewsDataProvider.js"
 
-const newArticleContentTarg = document.querySelector(".news-form") 
 
 export const newArticle = () => {
-    
+  const newArticleContentTarg = document.querySelector(".news-form") 
+
 
     newArticleContentTarg.innerHTML = `
 <button id="new-article" class="#" >New Article</button>
@@ -14,7 +14,7 @@ export const newArticle = () => {
 
 //this is an event listner to bring up the form when a user clicks the newArticle button
 
-newArticleContentTarg.addEventListener("clicks", clickEvent => {
+document.querySelector(".news-form").addEventListener("clicks", clickEvent => {
 
     if (clickEvent.target.id = "new-article" ){
         articleForm ()
@@ -23,6 +23,7 @@ newArticleContentTarg.addEventListener("clicks", clickEvent => {
 })
 
 export const articleForm = () => {
+  const newArticleContentTarg = document.querySelector(".news-form") 
 
 newArticleContentTarg.innerHTML = `
     
@@ -62,16 +63,17 @@ newArticleContentTarg.innerHTML = `
 </div>
 </div>
 </div>
-    
     `
 
 }
 
 //below is a function to send the new data to the JSON server
-const articleToAddContentTarg = document.querySelector(".dashboard") 
 
-articleToAddContentTarg.addEventListener("click", clickEvent => {
+
+document.querySelector(".news-form").addEventListener("click", clickEvent => {
   if (clickEvent.target.id === "saveArticle"){
+   
+
     console.log("you clicked")
     const nowDate = new Date()
     

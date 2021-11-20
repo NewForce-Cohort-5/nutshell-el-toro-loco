@@ -5,7 +5,7 @@ const eventHub = document.querySelector(".dashboard")
 const contentTarget = document.querySelector(".logOutButton")
 
 export const LogOutButton = () => {
-    contentTarget.innerHTML += `<button id="logout-button">Log Out</button>`
+    contentTarget.innerHTML += `<button id="logout-button" class="btn btn-primary">Log Out</button>`
 }
 
 eventHub.addEventListener("click", (eventObject) => {
@@ -14,8 +14,8 @@ eventHub.addEventListener("click", (eventObject) => {
         sessionStorage.clear()
 
         // clear the DOM
-        document.querySelector(".dashboard").innerHTML = ""
-
+        document.querySelector(".chat-list").innerHTML = ""
+        document.querySelector(".chat-form").innerHTML = ""
         // Reprint the login and register form
         LoginForm()
         RegisterForm()
