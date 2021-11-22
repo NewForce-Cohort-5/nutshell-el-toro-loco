@@ -6,17 +6,22 @@ import { Task } from "./TaskCard.js";
 import { completeTask } from "./TaskDataProvider.js";
 
 
-const contentTarget = document.querySelector(".task-list")
+
 
 export const taskList = () => {
     //get referecnce to array
+    const contentTarget = document.querySelector(".task-list")
+
     getTasks()
     .then(() => {
         let allTheTasks = useTasks()
+        
+        let sortedTasks = allTheTasks.sort((a,b) => {
+            return new Date(a.completeBy) - new Date (b.completeBy)})
 
         let taskHTML = ""
      
-        allTheTasks.forEach((singleTask) => {
+        sortedTasks.forEach((singleTask) => {
             if (singleTask.complete === false) {
             taskHTML += Task(singleTask)
             
@@ -29,7 +34,7 @@ export const taskList = () => {
 
 //Make a function to change completed status if checkbox is checked
 
-contentTarget.addEventListener("change" , (eventObject) => {
+document.querySelector(".task-list").addEventListener("change" , (eventObject) => {
     
     if (eventObject.target.checked === true) {
         const checkedTask = eventObject.target.id.split("--")[1]
