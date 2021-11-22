@@ -7,7 +7,7 @@ import { EventList } from "./EventList.js"
 
 
 const contentTarget = document.querySelector(".event-form")
-//sort then map
+
 
 contentTarget.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveEvents") {
@@ -39,11 +39,10 @@ export const EventForm = () => {
     <button type="button" class="btn btn-primary" id="modalButton" data-bs-toggle="modal" data-bs-target="#eventModal">
        Add Event
      </button>
-     
      <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
        <div class="modal-dialog modal-dialog-centered">
          <div class="modal-content">
-           <div class="modal-header">Add Task</div>
+           <div class="modal-header"></div>
              <div class="modal-body">
              <form class="eventForm">
                  <div action="eventName">
@@ -52,14 +51,11 @@ export const EventForm = () => {
                  <div action="eventLocation">
                  <textarea name="" id="eventLocation" placeholder="Enter the location of your event here"></textarea>
                  </div>
-                 <div action="addDate" class="addDate">Select the date of your event
-                         <input type="Date" name="Date" id="eventDate">        
+                 <div action="addDate" class="addDate"> Select the date of your event <input type="Date" name="Date" id="eventDate">        
                  </div>
              </form>
            <div class="modal-footer">
              <button type="button" id="saveEvents" class="btn btn-primary" data-bs-dismiss="modal">Save Event</button>
-             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Edit Event</button>      
-           </div>
        </div>
     </div>
     </div>

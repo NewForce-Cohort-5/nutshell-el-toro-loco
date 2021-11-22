@@ -4,10 +4,10 @@
 import { saveTask, getTasks, useTasks } from "./TaskDataProvider.js";
 import { taskList } from "./TaskList.js";
 
-const contentTarget = document.querySelector(".task-form")
+
 
 export const taskForm = () => {
-    
+  const contentTarget = document.querySelector(".task-form")
   contentTarget.innerHTML = `
     
     
@@ -52,22 +52,22 @@ export const taskForm = () => {
 }
 
 //Click event to save new task
-contentTarget.addEventListener("click", clickEvent => {
-  if (clickEvent.target.id === "saveTaskButton") {
+// contentTarget.addEventListener("click", clickEvent => {
+//   if (clickEvent.target.id === "saveTaskButton") {
 
-    //Make a new object representation of the task
-    const newTask = {
-      //Key value pairs here
-      //Add + to id to make it a number
-      userId: 1,      
-      taskName: document.querySelector(`#taskDate`).value,
-      taskDetail: document.querySelector(`#taskDetails`).value,
-      completeBy: document.querySelector(`#taskDate`).value,
-      complete: false
-    }
-    saveTask(newTask)
-    .then(taskList)
-  }
-})
+//     //Make a new object representation of the task
+//     const newTask = {
+//       //Key value pairs here
+//       //Add + to id to make it a number
+//       userId: 1,      
+//       taskName: document.querySelector(`#taskDate`).value,
+//       taskDetail: document.querySelector(`#taskDetails`).value,
+//       completeBy: document.querySelector(`#taskDate`).value,
+//       complete: false
+//     }
+//     saveTask(newTask)
+//     .then(taskList)
+//   }
+// })
 
 //userId: +sessionStorage.getItem("activeUser"),

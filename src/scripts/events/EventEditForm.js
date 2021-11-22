@@ -1,44 +1,42 @@
-import { useEvents, getEvents } from "./EventDataProvider.js";
-import { EventList } from "./EventList.js";
-import { updateEvent } from "./EventDataProvider.js";
+// import { useEvents, getEvents } from "./EventDataProvider.js";
+// import { EventList } from "./EventList.js";
+// import { updateEvent } from "./EventDataProvider.js";
 
 
-const contentTarget = document.querySelector(".event-list")
+// const contentTarget = document.querySelector(".event-list")
 
-export const EventEditForm = (eventId) => {
-    // Give this component access to our application's notes state
-    const allEvents = useEvents();
+// export const EventEditForm = (eventId) => {
+//     // Give this component access to our application's state
+//     const allEvents = useEvents();
 
-    // Find the note that we clicked on by its unique id
-    const eventWeWantToEdit = allEvents.find(singleEvent=> singleEvent.id === eventId)
+//     // Find the note that we clicked on by its unique id
+//     const eventWeWantToEdit = allEvents.find(singleEvent=> singleEvent.id === eventId)
 
-    // Print the form
-    // We'll use the HTML value attribute to pre-populate our form fields with the note's info
-    contentTarget.innerHTML = `
-        <h2>Edit Event</h2>
-            <input type="text" value="${eventWeWantToEdit.eventName}" id="eventNameChanges" />
-            <input type="date" id="eventDateChanges" value="${eventWeWantToEdit.eventDate}" />
-            <input type="text" value="${eventWeWantToEdit.eventLocation}" id="eventLocationChanges" />
-            <button id="saveEventChanges-${eventId}">Save Changes</button>
-    `
-}
+//     contentTarget.innerHTML = `
+//         <h2>Edit Event</h2>
+//             <input type="text" value="${eventWeWantToEdit.eventName}" id="eventNameChanges" />
+//             <input type="date" id="eventDateChanges" value="${eventWeWantToEdit.eventDate}" />
+//             <input type="text" value="${eventWeWantToEdit.eventLocation}" id="eventLocationChanges" />
+//             <button id="saveEventChanges-${eventId}">Save Changes</button>
+//     `
+// }
 
-contentTarget.addEventListener("click", (event) => {
-    if(event.target.id.startsWith("saveEventChanges")){
+// contentTarget.addEventListener("click", (event) => {
+//     if(event.target.id.startsWith("saveEventChanges")){
 
-        // Make a new object representation of a note
-        const editedEvent = {
-            id: event.target.id.split("-")[1],
-            eventName: document.querySelector("#eventNameChanges").value,
-            eventDate: document.querySelector("#eventDateChanges").value,
-            eventLocation: document.querySelector("#eventLocationChanges").value
-        }
-        // console.log(editedEvent)
-        // Send to json-server and refresh the list
-        updateEvent(editedEvent).then(EventList)
+//         // Make a new object representation of a note
+//         const editedEvent = {
+//             id: event.target.id.split("-")[1],
+//             eventName: document.querySelector("#eventNameChanges").value,
+//             eventDate: document.querySelector("#eventDateChanges").value,
+//             eventLocation: document.querySelector("#eventLocationChanges").value
+//         }
+//         // console.log(editedEvent)
+//         // Send to json-server and refresh the list
+//         updateEvent(editedEvent).then(EventList)
 
-    }
-})
+//     }
+// })
 
 
 
