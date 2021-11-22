@@ -1,3 +1,6 @@
+// When the user logs in, they should see their data printed to the DOM. You can accomplish this by retrieving their user Id from session storage and using it to query json-server for their associated data.
+
+
 import {Nutshell} from "../Nutshell.js"
 const contentTarget = document.querySelector(".auth--login")
 const eventHub = document.querySelector(".container")

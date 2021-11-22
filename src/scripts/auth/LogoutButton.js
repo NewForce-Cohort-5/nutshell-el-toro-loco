@@ -14,7 +14,7 @@ eventHub.addEventListener("click", (eventObject) => {
         sessionStorage.clear()
 
         // clear the DOM
-        document.querySelector(".dashboard").innerHTML = ""
+        document.querySelector(".user-container").innerHTML = ""
 
         // Reprint the login and register form
         LoginForm()
