@@ -14,8 +14,8 @@ eventHub.addEventListener("click", (eventObject) => {
         sessionStorage.clear()
 
         // clear the DOM
-        document.querySelector(".chat-list").innerHTML = ""
-        document.querySelector(".chat-form").innerHTML = ""
+        document.querySelector(".user-container").innerHTML = ""
+
         // Reprint the login and register form
         LoginForm()
         RegisterForm()

@@ -1,6 +1,10 @@
 import { LoginForm } from "./auth/LoginForm.js"
 import { RegisterForm } from "./auth/RegisterForm.js"
 import { Nutshell } from "./Nutshell.js"
+// import { MessageForm } from "./messages/MessageForm.js"
+// import { MessageList } from "./messages/MessageList.js"
+
+
 
 
 /*
@@ -20,6 +24,19 @@ if(!activeUser){
     RegisterForm()
 } else {
     Nutshell()
+
+
 }
 
 
+<<<<<<< HEAD
+=======
+// taskList()
+// taskForm()
+// EventList()
+// EventForm()
+// MessageList();
+// MessageForm();
+
+
+>>>>>>> main
