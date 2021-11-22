@@ -23,17 +23,19 @@
 .message-card{
     display: flex;
     justify-content: space-between;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: 10px auto 10px auto;
     
 
     
 }
 
 .chat-list {
-    justify-content: baseline;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    /* justify-content: space-evenly; */
     padding-bottom: 10px;
-    height: 250px;
+    height: 275px;
     width: auto;
     overflow-y: auto;
     position: relative;
