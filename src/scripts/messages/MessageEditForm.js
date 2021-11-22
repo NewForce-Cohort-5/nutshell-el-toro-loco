@@ -33,7 +33,7 @@ export const MessageEditForm = (chatId) => {
     contentTarget.addEventListener("click", e => {
         if(e.target.id.startsWith("sendEditedMessage")){
 
-            confirm('Are you sure you want to send this edited message?')
+            // confirm('Are you sure you want to send this edited message?')
 
 
             // new object representation

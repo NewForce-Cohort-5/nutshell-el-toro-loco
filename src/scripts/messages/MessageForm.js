@@ -65,7 +65,7 @@ document.querySelector("body").addEventListener("click", event => {
 
 
 
-export const MessageForm = (usersArray) => {
+export const MessageForm = () => {
   const contentTarget = document.querySelector('.chat-form');
 
   // const openChat = () => {
