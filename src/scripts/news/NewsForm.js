@@ -16,7 +16,7 @@ export const newArticle = () => {
 
 document.querySelector(".news-form").addEventListener("clicks", clickEvent => {
 
-    if (clickEvent.target.id = "new-article" ){
+    if (clickEvent.target.id === "new-article" ){
         articleForm ()
     }
 
@@ -83,7 +83,8 @@ document.querySelector(".news-form").addEventListener("click", clickEvent => {
                         url: document.querySelector("#newsUrl").value,
                         title:document.querySelector("#newsTitle").value,
                         synopsis: document.querySelector("#newsSynopsis").value,
-                        date: nowDate
+                        dateSaved: nowDate,
+                        dataUpdated: ""
  }
  debugger
  console.log(articleToAdd)

@@ -11,7 +11,7 @@ export const NewsList = () => {
 getNews ()
     .then (() => {
         let articlesArray = useNews ()
-        let articlesArraySortedbyDate = articlesArray.sort((a,b) => { return new Date(b.date) - new Date(a.date )})
+        let articlesArraySortedbyDate = articlesArray.sort((a,b) => { return new Date(b.dateSaved) - new Date(a.dateSaved )})
 
         
         console.log(articlesArraySortedbyDate)
@@ -20,6 +20,7 @@ getNews ()
 
         articlesArraySortedbyDate.forEach((singleObj) => {
             newsHTML+= news(singleObj)
+            
         });
         
         listContentTarget.innerHTML = `

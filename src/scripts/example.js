@@ -1,5 +1,5 @@
 //Dummy data for json
-"tasks": [
+let tasks= [
     {
       "id": 1,
       "userId": 1,
@@ -44,9 +44,26 @@
       "userId": 1,
       "taskName": "2021-12-02",
       "taskDetail": "Meela needs her nails trimmed.",
-      "completeBy": "2021-12-02",
+      "completeBy": "2021-11-14",
       "complete": false,
       "id": 6
     }
+  ]
+    console.log(new Date ())
+    console.dir(typeof(tasks[5].completeBy))
+     
 
-    
+    document.querySelector(".container").innerHTML = `
+    ${tasks[5].userId}`
+
+/*<script>
+document.getElementById("InsertRecordcbParamVirtual3_0").checked = true;
+document.getElementById("InsertRecordcbParamVirtual3_3").checked = true;
+{
+document.getElementById("Submit").style.display = "none"; 
+}
+else
+{
+document.getElementById("Submit").style.display = "visible"; 
+}
+</script>*/
