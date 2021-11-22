@@ -25,7 +25,7 @@ export const saveEvents = (events) => {
 
 export const updateEvent = events => {
 
-    return fetch(`http://localhost:8088/database/${events.id}`, {
+    return fetch(`http://localhost:8088/events/${events.id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
