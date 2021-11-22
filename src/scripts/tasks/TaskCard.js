@@ -5,7 +5,7 @@ import { updateTask, useTasks } from "./TaskDataProvider.js"
 import { taskList } from "./TaskList.js"
 
 export const Task = (task) => {
-    
+  if (task.userId === +sessionStorage.activeUser) {
   return `
     <div class="taskTag">
     <div class="taskName">Task: ${task.taskName}</div>
@@ -53,7 +53,11 @@ export const Task = (task) => {
 </div>
 </div>
 </div>
+  
 `
+  } else {
+    return ``
+  }
 }
 
  //Target save button.
@@ -67,7 +71,7 @@ eventHub.addEventListener("click", (event) => {
     //Add + in front of any number
     //The id is pulled from the save button
     const editedTask = {
-      userId: 1,      
+      userId: +sessionStorage.getItem("activeUser"),      
       taskName: document.querySelector(`#taskEditName-${+event.target.id.split("-")[1]}`).value,
       taskDetail: document.querySelector(`#taskEditDetails-${+event.target.id.split("-")[1]}`).value,
       completeBy: document.querySelector(`#taskEditDate-${+event.target.id.split("-")[1]}`).value,
