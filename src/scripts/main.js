@@ -27,8 +27,4 @@ if(!activeUser){
     Nutshell()
 }
 
-taskList()
-taskForm()
-EventList()
-EventForm()
-// EventEditForm()
+
