@@ -4,6 +4,7 @@ import { NewsList } from "./NewsList.js";
 // import { NewsEditForm } from "./NewsEditForm.js"
 //<button id="edit--${taco.id}" class="btn btn-primary">Edit</button> from the news after the delete
 export const news = (taco) =>  {
+    if (taco.userId === +sessionStorage.activeUser){
     
     return `
     <div class="newsCard" id="${taco.id}">
@@ -65,7 +66,10 @@ export const news = (taco) =>  {
 </div>
 </div>
 </div>
-    `
+    `}
+    else {
+       return ` `
+    }
 
 }
 
