@@ -86,8 +86,8 @@ document.querySelector(".news-form").addEventListener("click", clickEvent => {
                         dateSaved: nowDate,
                         dataUpdated: ""
  }
- debugger
- console.log(articleToAdd)
+//  debugger
+//  console.log(articleToAdd)
       document.querySelector("#newsUrl").value = ""
       document.querySelector("#newsTitle").value = ""
       document.querySelector("#newsSynopsis").value = ""

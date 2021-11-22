@@ -10,7 +10,10 @@ export const news = (taco) =>  {
     <h3>Title: ${taco.title}</h3>
     <p><a href=${taco.url} target="_blank" rel="noopener noreferrer"> the article url </a></p>
     <p>Date of the article saved: ${new Date (taco.dateSaved).toLocaleDateString('en-US')}</p>
-    <p>Last updated on ${new Date (taco.dateUpdated).toLocaleDateString('en-US')}</p>
+    ${ taco.dateUpdated === " "  ?
+            ` <p id="newsDateUpdated-edit">Date of the article last updated: It has not been updated</p>`
+            :
+            ` <p id="newsDateUpdated-edit">Date of the article last updated: ${new Date (taco.dateUpdated).toLocaleDateString('en-US')}</p>`}
     <p>Summary: ${taco.synopsis}</p>
     <button id="deleteNews--${taco.id}" class="formButton">Delete</button>
     
@@ -30,23 +33,26 @@ export const news = (taco) =>  {
         <form class="newsEditForm">
 
         <div action="newsTitle">
-            <input id="newsTitle-edit" type="text" value="${taco.title}">
+            <input id="newsTitleEdit--${taco.id}" type="text" value="${taco.title}">
         </div>
 
         <div action="newsUrl">
-            <input name="" type="text" id="newsUrl-edit" cols="30" rows="10" value="${taco.url}">
+            <input name="" type="text" id="newsUrlEdit--${taco.id}" cols="30" rows="10" value="${taco.url}">
         </div>
 
         <div action="newsSynopsis">
-            <textarea name="newsSynopsis" id="newsSynopsis-edit" placeholder="News Synopsis goes here">${taco.synopsis}</textarea>
+            <textarea name="newsSynopsis" id="newsSynopsisEdit--${taco.id}" placeholder="News Synopsis goes here">${taco.synopsis}</textarea>
         </div>
 
         <div action="newsDateSaved">
-            <input id="newsDateSaved-edit" value="${new Date (taco.dateSaved).toLocaleDateString('en-US')}"</input>
+            <input id="newsDateSavedEdit--${taco.id}"  value="${new Date (taco.dateSaved).toLocaleDateString('en-US')}"</input>
         </div>
 
         <div action="newsDateUpdated">
-            <p id="newsDateUpdated-edit">Date of the article last updated: ${new Date (taco.dateUpdated).toLocaleDateString('en-US')}</p>
+            
+            
+            
+          
         </div>
 
         </form>
@@ -63,27 +69,24 @@ export const news = (taco) =>  {
 
 }
 
-//this is to overlap the dateUpdated for the empty string
 
-if (document.getElementById("newsDateUpdated-edit") === " "){
-    document.getElementById("newsDateUpdated-edit").innerHTML = `<p> It has not been updated</p>`
-}
 
 document.querySelector(".news-list").addEventListener("click", (event) => {
+ 
     if(event.target.id.startsWith("saveNewsChanges")){
         const nowDate = new Date()
         const editedNews = {
             id: event.target.id.split("--")[1],
             userId:+sessionStorage.getItem("activeUser"),
-            url: document.querySelector("#newsUrl-edit").value,
-            title: document.querySelector("#newsTitle-edit").value,
-            synopsis:document.querySelector("#newsSynopsis-edit").value,
-            dateSaved:document.querySelector("#newsDateSaved-edit").value,
+            url: document.querySelector(`#newsUrlEdit--${+event.target.id.split("--")[1]}`).value,
+            title: document.querySelector(`#newsTitleEdit--${+event.target.id.split("--")[1]}`).value,
+            synopsis:document.querySelector(`#newsSynopsisEdit--${+event.target.id.split("--")[1]}`).value,
+            dateSaved:document.querySelector(`#newsDateSavedEdit--${+event.target.id.split("--")[1]}`).value,
             dateUpdated: nowDate
            
         }
         console.log(editedNews)
-        debugger
+       
         updateNews(editedNews).then(NewsList)
     }
 })

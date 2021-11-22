@@ -20,7 +20,7 @@ getNews ()
 
         articlesArraySortedbyDate.forEach((singleObj) => {
             newsHTML+= news(singleObj)
-            
+            //debugger
         });
         
         listContentTarget.innerHTML = `
