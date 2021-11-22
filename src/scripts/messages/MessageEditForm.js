@@ -16,10 +16,10 @@ export const MessageEditForm = (chatId) => {
 
     const messageWeWantToEdit = alltheMessages.find(singleMessage => singleMessage.id === chatId)
 
-    const cancelButton = () => {
-        document.getElementById('edit-chat-form').reset();
+    // const cancelButton = () => {
+    //     document.getElementById('edit-chat-form').reset();
     
-    }
+    // }
 
     contentTarget.innerHTML = `
     <section class="edit-chat-form">
