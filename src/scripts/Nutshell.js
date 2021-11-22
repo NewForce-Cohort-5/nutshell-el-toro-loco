@@ -13,8 +13,8 @@ export const Nutshell = () => {
     LogOutButton();
     MessageList();
     MessageForm();
-//     taskList()
-// taskForm()
+    taskList()
+    taskForm()
 // EventList()
 // EventForm()
 
