@@ -5,9 +5,11 @@ import {Nutshell} from "../Nutshell.js"
 const contentTarget = document.querySelector(".auth--login")
 const eventHub = document.querySelector(".container")
 
+
 // When the user clicks the login button
 eventHub.addEventListener("click", e => {
-    if (e.target.id === "login__button") {
+    if (e.target.id === "login__button") { 
+
 
         // Get their email from the login form
         const email = document.querySelector("#login__email").value
@@ -38,7 +40,8 @@ eventHub.addEventListener("click", e => {
 
 
 const render = () => {
-    contentTarget.innerHTML += `
+    contentTarget.innerHTML += 
+    `
         <section class="login">
             <input id="login__email" type="text" placeholder="Log In With Email">
             <button id="login__button">Log In</button>
@@ -49,3 +52,16 @@ const render = () => {
 export const LoginForm = () => {
     render()
 }
+
+
+// const hideChatContainer = document.querySelector("#login__button")
+
+// hideChatContainer.addEventListener("click", function() {
+//     const bodyElement = document.querySelector("body")
+    
+// })
+
+
+// const bodyElement = document.querySelector("hidden")
+
+// bodyElement.classList.toggle("chat-container")

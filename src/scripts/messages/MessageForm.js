@@ -23,7 +23,7 @@ import { MessageList } from "./MessageList.js";
 
 
  
-document.querySelector(".chat-form").addEventListener("click", event => {
+document.querySelector("body").addEventListener("click", event => {
  
   if (event.target.id === "sendMessage") {
     // console.log('hello')
