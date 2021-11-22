@@ -7,6 +7,7 @@ import { EventForm } from "./events/EventForm.js"
 import { taskForm } from "./Tasks/TaskForm.js"
 
 
+
 /*
     1. Check if the user is authenticated by looking in session storage for `activeUser`
     2. If so, render the Nutshell component
@@ -25,6 +26,7 @@ if(!activeUser){
 } else {
     Nutshell()
 }
+
 
 taskList()
 taskForm()
