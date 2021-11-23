@@ -6,11 +6,13 @@ import { EventList } from "./EventList.js"
 
 
 
-const contentTarget = document.querySelector(".event-form")
+
 
 
 document.querySelector("body").addEventListener("click", clickEvent => {
-    if (clickEvent.target.id === "saveEvent") {
+    
+  
+  if (clickEvent.target.id === "saveEvent") {
 
         const newEvent = {
             eventName: document.querySelector("#eventName-text").value,
@@ -29,6 +31,7 @@ document.querySelector("body").addEventListener("click", clickEvent => {
 })
 
 export const EventForm = () => {
+  const contentTarget = document.querySelector(".event-form")
     return getEvents ()
     .then(() => {
         //do i need a line here to useEvents

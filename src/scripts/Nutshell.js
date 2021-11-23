@@ -18,7 +18,6 @@ export const Nutshell = () => {
   
     taskList()
     taskForm()
-    
     EventList()
     EventForm()
 

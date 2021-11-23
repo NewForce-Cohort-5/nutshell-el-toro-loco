@@ -76,3 +76,24 @@
       }
     })
     
+    const chatHub = document.querySelector("body")
+
+chatHub.addEventListener("click", function() {
+    const chatElement = document.querySelector("chat-container")
+
+    chatElement.classList.toogle("chat-box")
+})
+
+function showChat() {
+    document.getElementById("chat-container").style.display= "block"
+}
+
+const eventHub = document.querySelector("body")
+
+//Event Listener for edit form.  
+eventHub.addEventListener("click", (event) => {
+    if (event.target.id === "login__button") {
+showChat()
+  } } )
+
+<div style="display:none" class="chat-container" id="chat-container">
