@@ -11,6 +11,10 @@ import { MessageList } from "./messages/MessageList.js"
 export const Nutshell = () => {
     LogOutButton()
 
+    LogOutButton();
+    showChat();
+    MessageList();
+    MessageForm();
     newArticle()
     articleForm()
     NewsList()
@@ -21,6 +25,19 @@ export const Nutshell = () => {
     EventList()
     EventForm()
 
+   
+      // Render all your UI components here
+}
+
+function showChat() {
+    document.getElementById("chat-container").style.display= "block"
+}
+const eventHub = document.querySelector("body")
+//Event Listener for edit form.  
+eventHub.addEventListener("click", (event) => {
+    if (event.target.id === "login__button") {
+showChat()
+  } } )
     MessageList();
     MessageForm();
  

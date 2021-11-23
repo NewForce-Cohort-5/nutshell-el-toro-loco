@@ -30,21 +30,6 @@ if(!activeUser){
 
 //Had to add this function because css was messed up for this container
 //Also had to add display type on index
-function showChat() {
-    document.getElementById("chat-container").style.display= "block"
-}
 
-const eventHub = document.querySelector("body")
-//Event Listener for edit form.  
-eventHub.addEventListener("click", (event) => {
-    if (event.target.id === "login__button") {
-showChat()
-  } } )
-// taskList()
-// taskForm()
-// EventList()
-// EventForm()
-// MessageList();
-// MessageForm();
 
 
