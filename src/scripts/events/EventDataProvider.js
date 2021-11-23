@@ -1,3 +1,6 @@
+//jonah
+//multiple fetch calls
+
 let eventsArray = []
 
 export const useEvents = () => {
@@ -12,7 +15,7 @@ export const getEvents = () => {
         })
 }
 
-export const saveEvents = () => {
+export const saveEvents = (events) => {
     return fetch('http://localhost:8088/events', {
         method: "POST",
         headers: {
@@ -25,7 +28,7 @@ export const saveEvents = () => {
 
 export const updateEvent = events => {
 
-    return fetch(`http://localhost:8088/database/${events.id}`, {
+    return fetch(`http://localhost:8088/events/${events.id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
