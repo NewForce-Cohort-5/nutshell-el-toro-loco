@@ -2,6 +2,12 @@
 import { deleteNews, updateNews } from "./NewsDataProvider.js";
 import { NewsList } from "./NewsList.js";
 // import { NewsEditForm } from "./NewsEditForm.js"
+
+//   <p>Date of the article saved: ${new Date (taco.dateSaved).toLocaleDateString('en-US')}</p>
+// ${ taco.dateUpdated === "" ?
+// ` <p id="newsDateUpdated-edit">Date of the article last updated: It has not been updated</p>`
+// :
+// ` <p id="newsDateUpdated-edit">Date of the article last updated: ${new Date (taco.dateUpdated).toLocaleDateString('en-US')}</p>`}
 //<button id="edit--${taco.id}" class="btn btn-primary">Edit</button> from the news after the delete
 export const news = (taco) =>  {
     if (taco.userId === +sessionStorage.activeUser){
@@ -10,11 +16,7 @@ export const news = (taco) =>  {
     <div class="newsCard" id="${taco.id}">
     <h3>Title: ${taco.title}</h3>
     <p><a href=${taco.url} target="_blank" rel="noopener noreferrer"> the article url </a></p>
-    <p>Date of the article saved: ${new Date (taco.dateSaved).toLocaleDateString('en-US')}</p>
-    ${ taco.dateUpdated === " "  ?
-            ` <p id="newsDateUpdated-edit">Date of the article last updated: It has not been updated</p>`
-            :
-            ` <p id="newsDateUpdated-edit">Date of the article last updated: ${new Date (taco.dateUpdated).toLocaleDateString('en-US')}</p>`}
+    <p id="newsDateUpdated-edit">Date of the article saved: ${new Date (taco.dateSaved).toLocaleDateString('en-US')}</p>
     <p>Summary: ${taco.synopsis}</p>
     <button id="deleteNews--${taco.id}" class="formButton">Delete</button>
     

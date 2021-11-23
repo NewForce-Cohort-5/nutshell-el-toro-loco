@@ -23,7 +23,7 @@
     border: 3pt solid;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-/* .completedCSS {
+
 .chat-container {
     float: right;
     padding: 5px 10px 25px 25px;
@@ -90,4 +90,4 @@
 .completedCSS{
     display: flex;
     gap: 10px;
-} */
+} 
