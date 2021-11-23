@@ -84,7 +84,7 @@ document.querySelector(".news-form").addEventListener("click", clickEvent => {
                         title:document.querySelector("#newsTitle").value,
                         synopsis: document.querySelector("#newsSynopsis").value,
                         dateSaved: nowDate,
-                        dataUpdated: ""
+                        dataUpdated: "This article has not been updated"
  }
 //  debugger
 //  console.log(articleToAdd)
