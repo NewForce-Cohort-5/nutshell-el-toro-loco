@@ -2,9 +2,12 @@ import { getEvents, useEvents } from "../events/EventDataProvider.js";
 import { Event } from "../events/EventCard.js";
 
 
-const contentTarget = document.querySelector(".event-list")
+
 
 export const EventList = () => {
+
+    const contentTarget = document.querySelector(".event-list")
+
     getEvents()
     .then(() => {
 
