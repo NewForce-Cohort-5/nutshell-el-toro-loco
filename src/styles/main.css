@@ -18,12 +18,17 @@
 .eventCard:first-child {
     background-color: lightskyblue;
     display: flex;
+    width: max-content;
     font-weight: bold;
     font-size: larger;
     border: 3pt solid;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 .chat-container {
     float: right;
     padding: 5px 10px 25px 25px;
@@ -32,9 +37,7 @@
     margin-bottom: 25px;
     margin-top: 50%;
     border-radius: 5px;
-    
-   
-    
+     
 }
 
 .message-card{
@@ -49,8 +52,8 @@
 .chat-list {
     display: flex;
     flex-direction: column;
-    margin-top: auto;
-    /* justify-content: space-evenly; 
+    margin-top: auto; 
+    justify-content: space-evenly; 
     padding-bottom: 10px;
     height: 275px;
     width: auto;
@@ -90,4 +93,4 @@
 .completedCSS{
     display: flex;
     gap: 10px;
-} 
+}
