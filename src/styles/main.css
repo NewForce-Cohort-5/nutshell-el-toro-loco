@@ -15,6 +15,15 @@
     font-size: 15px;
 }
 
+.eventCard:first-child {
+    background-color: lightskyblue;
+    display: flex;
+    font-weight: bold;
+    font-size: larger;
+    border: 3pt solid;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* .completedCSS {
 .chat-container {
     float: right;
     padding: 5px 10px 25px 25px;
@@ -41,16 +50,14 @@
     display: flex;
     flex-direction: column;
     margin-top: auto;
-    /* justify-content: space-evenly; */
+    /* justify-content: space-evenly; 
     padding-bottom: 10px;
     height: 275px;
     width: auto;
     overflow-y: auto;
     position: relative;
-  
-    
-    
 }
+
 .chat-form, .edit-chat-container{
     display: flex;
     margin-top: 10px;
@@ -83,4 +90,4 @@
 .completedCSS{
     display: flex;
     gap: 10px;
-}
+} */

@@ -1,7 +1,6 @@
 import {LogOutButton} from "./auth/LogoutButton.js"
 import { MessageForm } from "./messages/MessageForm.js"
 import { MessageList } from "./messages/MessageList.js"
-
 import { taskList } from "./Tasks/TaskList.js"
 import { EventList } from "./events/EventList.js"
 import { EventForm } from "./events/EventForm.js"
@@ -17,7 +16,4 @@ export const Nutshell = () => {
     taskForm()
     EventList()
     EventForm()
-
-   
-      // Render all your UI components here
 }
