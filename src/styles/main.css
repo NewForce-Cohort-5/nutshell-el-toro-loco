@@ -277,13 +277,6 @@ h1,h2,h3,h4,h5,h6 {
     display: none;
 }
 
-/* body{
-    opacity: 0.75;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c5/El_Toro_Loco_Monster_Truck_Snorting_Smoke.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
-
 .login-space .group .button {
     background: #1161ee
 }
@@ -395,3 +388,30 @@ a {
  margin-right: 10px;
  margin-top: 10px;
 }
+
+
+/* body{
+    opacity: 0.75;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c5/El_Toro_Loco_Monster_Truck_Snorting_Smoke.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+body {
+    position: relative;
+    z-index: 1;
+  }
+  
+body:before {
+    content: " ";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 110%;  
+    opacity: .4; 
+    z-index: -1;
+    background: url("https://upload.wikimedia.org/wikipedia/commons/c/c5/El_Toro_Loco_Monster_Truck_Snorting_Smoke.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
