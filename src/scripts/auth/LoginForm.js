@@ -43,9 +43,10 @@ const render = () => {
     contentTarget.innerHTML += 
     `
         <section class="login">
-            <input id="login__email" type="text" placeholder="Log In With Email">
-            <button id="login__button">Log In</button>
+            <input id="login__email" type="text" class="formInput" placeholder=" Log In With Email">
+            <button class="formButton" id="login__button">Log In</button>
         </section>
+        
     `
 }
 
