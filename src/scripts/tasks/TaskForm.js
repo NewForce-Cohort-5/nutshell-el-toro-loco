@@ -52,6 +52,23 @@ export const taskForm = () => {
 //Target body
 const newTaskHub = document.querySelector("body")
 //Click event to save new task
+// contentTarget.addEventListener("click", clickEvent => {
+//   if (clickEvent.target.id === "saveTaskButton") {
+
+//     //Make a new object representation of the task
+//     const newTask = {
+//       //Key value pairs here
+//       //Add + to id to make it a number
+//       userId: 1,      
+//       taskName: document.querySelector(`#taskDate`).value,
+//       taskDetail: document.querySelector(`#taskDetails`).value,
+//       completeBy: document.querySelector(`#taskDate`).value,
+//       complete: false
+//     }
+//     saveTask(newTask)
+//     .then(taskList)
+//   }
+// })
 newTaskHub.addEventListener("click", clickEvent => {
   if (clickEvent.target.id === "saveNewTask") {
 

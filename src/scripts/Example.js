@@ -1,5 +1,5 @@
 //Dummy data for json
-"tasks": [
+"tasks" [
     {
       "id": 1,
       "userId": 1,
@@ -47,6 +47,7 @@
       "completeBy": "2021-12-02",
       "complete": false,
       "id": 6
+    }]
     },
     {
       "userId": 1,
@@ -76,6 +77,8 @@
       }
     })
     
+<<<<<<< HEAD
+=======
     const chatHub = document.querySelector("body")
 
 chatHub.addEventListener("click", function() {
@@ -97,3 +100,4 @@ showChat()
   } } )
 
 <div style="display:none" class="chat-container" id="chat-container">
+>>>>>>> main
