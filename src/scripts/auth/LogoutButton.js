@@ -5,7 +5,7 @@ const eventHub = document.querySelector(".dashboard")
 const contentTarget = document.querySelector(".dashboard")
 
 export const LogOutButton = () => {
-    contentTarget.innerHTML += `<button id="logout-button">Log Out</button>`
+    contentTarget.innerHTML += `<button id="logout-button" class="btn btn-secondary">Log Out</button>`
 }
 
 eventHub.addEventListener("click", (eventObject) => {
