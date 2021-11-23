@@ -9,7 +9,7 @@ import { MessageForm } from "./messages/MessageForm.js"
 import { MessageList } from "./messages/MessageList.js"
 
 export const Nutshell = () => {
-    LogOutButton()
+    
 
     LogOutButton();
     showChat();
@@ -44,5 +44,5 @@ showChat()
    
       // Render all your UI components here
       
-}
+
 
