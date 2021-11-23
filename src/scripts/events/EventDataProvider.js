@@ -1,3 +1,6 @@
+//jonah
+//multiple fetch calls
+
 let eventsArray = []
 
 export const useEvents = () => {

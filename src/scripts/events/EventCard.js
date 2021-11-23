@@ -1,3 +1,6 @@
+//author: jonah
+// save and edit form
+
 // import { EventEditForm } from "./EventEditForm.js"
 import { EventList } from "./EventList.js"
 import { useEvents } from "./EventDataProvider.js"
@@ -7,9 +10,10 @@ import { updateEvent } from "./EventDataProvider.js"
 {/* <button class="formButton" id="edit-${events.id}">Edit</button> */}
 
 
-const contentTarget = document.querySelector(".event-list")
+// const contentTarget = document.querySelector(".event-list")
 
 export const Event = (events) => {
+  if (events.userId === +sessionStorage.activeUser) {
     return `
     <section class="eventCard"> 
            <div class="event-name">${events.eventName}</div>
@@ -28,13 +32,13 @@ export const Event = (events) => {
              <div class="modal-body">
              <form class="eventForm">
                  <div action="eventName">
-                    <input id="eventNameChanges" type="text" value="${events.eventName}">
+                    <input id="eventNameChanges-${events.id}" type="text" value="${events.eventName}">
                  </div>
                  <div action="eventLocation">
-                    <input id="eventLocationChanges" type="text" value="${events.eventLocation}">
+                    <input id="eventLocationChanges-${events.id}" type="text" value="${events.eventLocation}">
                  </div>
                  <div action="addDate" class="addDate">
-                         <input type="Date" name="Date" id="eventDateChanges" value="${events.eventDate}">        
+                         <input type="Date" name="Date" id="eventDateChanges-${events.id}" value="${events.eventDate}">        
                  </div>
              </form>
            <div class="modal-footer">
@@ -45,6 +49,9 @@ export const Event = (events) => {
     </div>
     </div>
     `
+} else {
+  return ``
+}
 }
 
 
@@ -54,10 +61,10 @@ document.querySelector("body").addEventListener("click", (event) => {
         // Make a new object representation of a note
         const editedEvent = {
             id: event.target.id.split("-")[1],
-            // userId: +sessionStorage.getItem("activeUser"),
-            eventName: document.querySelector("#eventNameChanges").value,
-            eventDate: document.querySelector("#eventDateChanges").value,
-            eventLocation: document.querySelector("#eventLocationChanges").value
+            userId: +sessionStorage.getItem("activeUser"),
+            eventName: document.querySelector(`#eventNameChanges-${+event.target.id.split("-")[1]}`).value,
+            eventDate: document.querySelector(`#eventDateChanges-${+event.target.id.split("-")[1]}`).value,
+            eventLocation: document.querySelector(`#eventLocationChanges-${+event.target.id.split("-")[1]}`).value
         }
         //  console.log(editedEvent)
         

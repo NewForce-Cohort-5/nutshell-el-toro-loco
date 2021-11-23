@@ -1,3 +1,6 @@
+//jonah
+//shows where to print and add event listenr
+
 import { getEvents, useEvents } from "../events/EventDataProvider.js";
 import { Event } from "../events/EventCard.js";
 

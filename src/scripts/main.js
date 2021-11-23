@@ -8,6 +8,7 @@ import { EventForm } from "./events/EventForm.js"
 import { taskForm } from "./Tasks/TaskForm.js"
 
 
+
 /*
     1. Check if the user is authenticated by looking in session storage for `activeUser`
     2. If so, render the Nutshell component
@@ -26,5 +27,21 @@ if(!activeUser){
 } else {
     Nutshell()
 }
+
+function showChat() {
+    document.getElementById("chat-container").style.display= "block"
+}
+const eventHub = document.querySelector("body")
+//Event Listener for edit form.  
+eventHub.addEventListener("click", (event) => {
+    if (event.target.id === "login__button") {
+showChat()
+  } } )
+// taskList()
+// taskForm()
+// EventList()
+// EventForm()
+// MessageList();
+// MessageForm();
 
 

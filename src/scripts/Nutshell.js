@@ -12,16 +12,9 @@ export const Nutshell = () => {
     LogOutButton();
     MessageList();
     MessageForm();
-//     taskList()
-// taskForm()
-// EventList()
-// EventForm()
-
-   
-      // Render all your UI components here
-taskList()
-taskForm()
-EventList()
-EventForm()
+    taskList()
+    taskForm()
+    EventList()
+    EventForm()
 }
 

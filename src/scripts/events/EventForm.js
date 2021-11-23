@@ -1,3 +1,6 @@
+//jonah
+//the form the user will see to enter data
+
 import { getEvents, useEvents } from "./EventDataProvider.js"
 import { saveEvents } from "./EventDataProvider.js"
 import { EventList } from "./EventList.js"
@@ -35,7 +38,7 @@ export const EventForm = () => {
     .then(() => {
         //do i need a line here to useEvents
 
-    contentTarget.innerHTML = `
+    document.querySelector(".event-form").innerHTML = `
     <button type="button" class="btn btn-primary" id="modalButton" data-bs-toggle="modal" data-bs-target="#eventModal">
        Add Event
      </button>
