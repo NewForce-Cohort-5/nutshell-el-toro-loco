@@ -16,20 +16,30 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css"
     />
-    <title>Nutshell El Toro</title>
+    <title>Nutshell El Toro Loco</title>
 </head>
 
 <body>
   
-    <article class="container">
+  <header class="header">
+            <div>
+            <img class="header-image" src="" alt="El Toro Loco">
+
+            </div>
+            <article class="container">
         <article class="auth">
             <section class="auth--logout"></section>
             <section class="auth--login"></section>
             <section class="auth--register"></section>
         </article>
-        <article class="dashboard" id="clear-dashboard">
+          </header>
+    
+        
+        <article class="dashboard hide" id="clear-dashboard">
             <!-- All your Nutshell are belong here -->
-              <div class="news-container">
+            
+        
+            <div class="news-container">
               <div class="news-form"></div>
               <div class="news-list"></div>
             </div>
@@ -44,13 +54,14 @@
               
               <div class="task-edit-form"></div>
           </div>
-           <div style="display:none"class="chat-container" id="chat-container">
+          <div>
+            <div class="logOutButton"></div>
+           <div class="chat-container" id="chat-container">
+              
               <div class="chat-list"></div>
               <div class="chat-form"></div>
-              <div class="chat-list"></div>
-              
             </div>
-            <div class="logOutButton"></div>
+          </div>
         </article>
     </article>
 

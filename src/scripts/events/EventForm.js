@@ -28,6 +28,7 @@ document.querySelector("body").addEventListener("click", clickEvent => {
        
         saveEvents(newEvent)
         .then(EventList) // Refresh your list of events once you've saved your new one
+        
     }
 })
 
@@ -54,17 +55,12 @@ export const EventForm = () => {
                  <div action="eventLocation">
                  <textarea name="" id="eventLocation" placeholder="Enter the location of your event here"></textarea>
                  </div>
-<<<<<<< HEAD
-                 <div action="addDate" class="addDate" id="eventDate">Select the date of your event
-                         <input type="Date" name="Date" id="Date">        
-=======
-                 <div action="addDate" class="addDate">Select the date of your event
+                 <div action="addDate" class="addDate" id="Date">Select the date of your event
                          <input type="Date" name="Date" id="eventDate">        
->>>>>>> main
                  </div>
              </form>
            <div class="modal-footer">
-             <button type="button" id="saveEvent" class="btn btn-primary">Save Event</button>
+             <button type="button" id="saveEvent" class="btn btn-primary" data-bs-dismiss="modal">Save Event</button>
             
            </div>
        </div>
@@ -75,10 +71,10 @@ export const EventForm = () => {
     })
 }
 
-{/* <section>
+/* <section>
         <H3 class="event-header">Please enter the details of your event here...</H3>
         <input class="form-control" type="textarea" id="eventName-text" placeholder="Enter name of event here...">
         <input class="form-control" type="date" id="eventDate-text">
         <input class="form-control" type="textarea" id="eventLocation-text" placeholder="Enter the location of the event here...">
         <button id="saveEvent">Save Event</button>
-    </section>  */}
+    </section>  */

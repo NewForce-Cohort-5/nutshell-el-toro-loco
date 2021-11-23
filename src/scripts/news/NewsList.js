@@ -24,7 +24,7 @@ getNews ()
         });
         
         listContentTarget.innerHTML = `
-        <h2>List of articles</h2>
+        <h3>News</h3><br>
         ${newsHTML}`
     })
 }

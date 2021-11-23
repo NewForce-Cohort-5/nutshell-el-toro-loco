@@ -77,8 +77,6 @@
       }
     })
     
-<<<<<<< HEAD
-=======
     const chatHub = document.querySelector("body")
 
 chatHub.addEventListener("click", function() {
@@ -100,4 +98,3 @@ showChat()
   } } )
 
 <div style="display:none" class="chat-container" id="chat-container">
->>>>>>> main
