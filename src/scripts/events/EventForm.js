@@ -58,7 +58,7 @@ export const EventForm = () => {
                  </div>
              </form>
            <div class="modal-footer">
-             <button type="button" class="btn btn-primary">Save Event</button>
+             <button type="button" class="btn btn-primary" id="saveEvent">Save Event</button>
             
            </div>
        </div>
