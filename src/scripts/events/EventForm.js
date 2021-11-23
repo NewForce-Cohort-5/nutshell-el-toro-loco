@@ -15,15 +15,15 @@ document.querySelector("body").addEventListener("click", clickEvent => {
   if (clickEvent.target.id === "saveEvent") {
 
         const newEvent = {
-            eventName: document.querySelector("#eventName-text").value,
-            eventDate: document.querySelector("#eventDate-text").value,
+            eventName: document.querySelector("#eventName").value,
+            eventDate: document.querySelector("#eventDate").value,
             eventLocation: document.querySelector("#eventLocation").value
             //also need to save userid
         }
         // console.log(newNote)
-        document.querySelector("#eventName-text").value = ""
-        document.querySelector("#eventDate-text").value = ""
-        document.querySelector("#eventLocation-text").value = ""
+        document.querySelector("#eventName").value = ""
+        document.querySelector("#eventDate").value = ""
+        document.querySelector("#eventLocation").value = ""
        
         saveEvents(newEvent)
         .then(EventList) // Refresh your list of events once you've saved your new one
@@ -53,12 +53,12 @@ export const EventForm = () => {
                  <div action="eventLocation">
                  <textarea name="" id="eventLocation" placeholder="Enter the location of your event here"></textarea>
                  </div>
-                 <div action="addDate" class="addDate">Select the date of your event
+                 <div action="addDate" class="addDate" id="eventDate">Select the date of your event
                          <input type="Date" name="Date" id="Date">        
                  </div>
              </form>
            <div class="modal-footer">
-             <button type="button" class="btn btn-primary">Save Event</button>
+             <button type="button" id="saveEvent" class="btn btn-primary">Save Event</button>
             
            </div>
        </div>
