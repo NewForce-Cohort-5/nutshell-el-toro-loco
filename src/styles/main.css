@@ -54,7 +54,6 @@ margin-top: 25px;
 }
 
 
-
 .chat-container {
     float: right;
     padding: 5px 10px 25px 25px;
@@ -321,3 +320,4 @@ a {
 ::placeholder {
     color: #b3b3b3
 }
+
