@@ -42,4 +42,9 @@ eventHub.addEventListener("click", e => {
 
     }
 
+    // export const myFunction = () => {
+
+    //     document.getElementById("hideBorder").style.border = "thick solid #0000FF";
+    //     }
+
     // ${sessionStorage.getItem("activeUser", user.id)? `<button class="message-edit btn btn-primary" id="editChat-${message.id}">modify</button>` : ""}

@@ -16,16 +16,16 @@ export const MessageEditForm = (chatId) => {
 
     const messageWeWantToEdit = alltheMessages.find(singleMessage => singleMessage.id === chatId)
 
-    const cancelButton = () => {
-        document.getElementById('edit-chat-form').reset();
+    // const cancelButton = () => {
+    //     document.getElementById('edit-chat-form').reset();
     
-    }
+    // }
 
     contentTarget.innerHTML = `
     <section class="edit-chat-form">
     <input type="textarea" id="edit-chat-text" value="${messageWeWantToEdit.message}"placeholder="edit message.."></textarea>
     <button id="sendEditedMessage-${chatId}" class="btn btn-primary">Send</button>
-    <button type="cance" class="btn btn-secondary" id=cancelButton-${chatId}>Cancel</button>
+    <button type="cancel" class="btn btn-secondary"  id=cancelButton-${chatId}>Cancel</button>
     </section>
     `
     
