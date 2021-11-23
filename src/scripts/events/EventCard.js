@@ -42,7 +42,7 @@ export const Event = (events) => {
                  </div>
              </form>
            <div class="modal-footer">
-             <button type="button" id="saveEditEvents-${events.id}" class="btn btn-primary" data-bs-dismiss="modal">Save Event</button>      
+             <button type="button" id="saveEditedEvent-${events.id}" class="btn btn-primary" data-bs-dismiss="modal">Save Event</button>      
            </div>
        </div>
     </div>
@@ -56,7 +56,7 @@ export const Event = (events) => {
 
 
 document.querySelector("body").addEventListener("click", (event) => {
-    if(event.target.id.startsWith("saveEditEvent")){
+    if(event.target.id.startsWith("saveEditedEvent")){
         // console.log("you got mail")
         // Make a new object representation of a note
         const editedEvent = {

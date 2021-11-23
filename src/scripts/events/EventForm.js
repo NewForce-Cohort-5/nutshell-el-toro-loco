@@ -15,6 +15,7 @@ document.querySelector("body").addEventListener("click", clickEvent => {
   if (clickEvent.target.id === "saveEvent") {
 
         const newEvent = {
+            userId: +sessionStorage.getItem("activeUser"),
             eventName: document.querySelector("#eventName").value,
             eventDate: document.querySelector("#eventDate").value,
             eventLocation: document.querySelector("#eventLocation").value
@@ -53,8 +54,13 @@ export const EventForm = () => {
                  <div action="eventLocation">
                  <textarea name="" id="eventLocation" placeholder="Enter the location of your event here"></textarea>
                  </div>
+<<<<<<< HEAD
                  <div action="addDate" class="addDate" id="eventDate">Select the date of your event
                          <input type="Date" name="Date" id="Date">        
+=======
+                 <div action="addDate" class="addDate">Select the date of your event
+                         <input type="Date" name="Date" id="eventDate">        
+>>>>>>> main
                  </div>
              </form>
            <div class="modal-footer">
