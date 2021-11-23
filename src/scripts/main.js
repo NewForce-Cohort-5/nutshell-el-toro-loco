@@ -1,6 +1,12 @@
 import { LoginForm } from "./auth/LoginForm.js"
 import { RegisterForm } from "./auth/RegisterForm.js"
 import { Nutshell } from "./Nutshell.js"
+import { taskList } from "./Tasks/TaskList.js"
+import { EventList } from "./events/EventList.js"
+import { EventForm } from "./events/EventForm.js"
+// import { EventEditForm } from "./events/EventCard.js"
+import { taskForm } from "./Tasks/TaskForm.js"
+
 
 
 /*
@@ -12,6 +18,7 @@ import { Nutshell } from "./Nutshell.js"
 */
 
 
+
 const activeUser = sessionStorage.getItem("activeUser")
 
 if(!activeUser){
@@ -20,3 +27,24 @@ if(!activeUser){
 } else {
     Nutshell()
 }
+
+//Had to add this function because css was messed up for this container
+//Also had to add display type on index
+function showChat() {
+    document.getElementById("chat-container").style.display= "block"
+}
+
+const eventHub = document.querySelector("body")
+//Event Listener for edit form.  
+eventHub.addEventListener("click", (event) => {
+    if (event.target.id === "login__button") {
+showChat()
+  } } )
+// taskList()
+// taskForm()
+// EventList()
+// EventForm()
+// MessageList();
+// MessageForm();
+
+
