@@ -94,9 +94,14 @@ document.querySelector(".news-list").addEventListener("click", (event) => {
             dateUpdated: nowDate
            
         }
+
+        if ( editedNews.url === '' ||  editedNews.title === '' ||  editedNews.synopsis === '' ||  editedNews.dateSaved === '') {
+            alert('Please enter valid values')}
+         else{
+
         console.log(editedNews)
        
-        updateNews(editedNews).then(NewsList)
+        updateNews(editedNews).then(NewsList)}
     }
 })
 

@@ -93,7 +93,12 @@ document.querySelector(".news-form").addEventListener("click", clickEvent => {
       document.querySelector("#newsTitle").value = ""
       document.querySelector("#newsSynopsis").value = ""
 
+
+      if ( articleToAdd.url === '' ||  articleToAdd.title === '' ||  articleToAdd.synopsis === '' || articleToAdd.dateSaved === '') {
+        alert('Please enter valid values') }
+     else{
+
  saveNews(articleToAdd)
- .then(NewsList)
+ .then(NewsList)}
 
 }                })

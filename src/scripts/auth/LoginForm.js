@@ -3,6 +3,8 @@
 
 import {Nutshell} from "../Nutshell.js"
 import { LogOutButton } from "./LogoutButton.js"
+import { RegisterForm } from "./RegisterForm.js"
+
 const contentTarget = document.querySelector(".auth--login")
 const eventHub = document.querySelector(".container")
 

@@ -25,10 +25,13 @@ document.querySelector("body").addEventListener("click", clickEvent => {
         document.querySelector("#eventName").value = ""
         document.querySelector("#eventDate").value = ""
         document.querySelector("#eventLocation").value = ""
-       
+
+        if ( newEvent.eventName === '' ||  newEvent.eventDate === '' ||  newEvent.eventLocation === '') {
+          alert('Please enter valid values') }
+       else{
         saveEvents(newEvent)
         .then(EventList) // Refresh your list of events once you've saved your new one
-        
+       }   
     }
 })
 

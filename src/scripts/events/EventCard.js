@@ -68,10 +68,14 @@ document.querySelector("body").addEventListener("click", (event) => {
             eventLocation: document.querySelector(`#eventLocationChanges-${+event.target.id.split("-")[1]}`).value
         }
         //  console.log(editedEvent)
+
+        if ( editedEvent.eventName === '' ||  editedEvent.eventDate === '' ||  editedEvent.eventLocation === '') {
+          alert('Please enter valid values')}
+       else{
         
         // Send to json-server and refresh the list
         updateEvent(editedEvent).then(EventList)
-
+       }
     }
 })
 
