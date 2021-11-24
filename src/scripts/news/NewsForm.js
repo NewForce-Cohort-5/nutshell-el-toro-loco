@@ -37,21 +37,21 @@ newArticleContentTarg.innerHTML = `
 <!-- Modal -->
 <div class="modal fade" id="eateriesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
+    <div class="modal-content" style=" background-color: rgba(200, 200, 200, 0.8);">
       <div class="modal-header">Add News</div>
         <div class="modal-body">
         <form class="newsForm">
             
             <div action="newsTitle">
-                <input id="newsTitle" type="text" placeholder="News Title goes here">
+                <input style=" background-color: rgba(228, 230, 230, 0.8);" id="newsTitle" type="text" placeholder="News Title goes here">
             </div>
             
             <div action="newsUrl">
-                <input name="" type="text" id="newsUrl" cols="30" rows="10" placeholder="News url goes here">
+                <input style=" background-color: rgba(228, 230, 230, 0.8);" name="" type="text" id="newsUrl" cols="30" rows="10" placeholder="News url goes here">
             </div>
     
             <div action="newsSynopsis">
-                <textarea name="newsSynopsis" id="newsSynopsis" placeholder="News Synopsis goes here"></textarea>        
+                <textarea style=" background-color: rgba(228, 230, 230, 0.8);" name="newsSynopsis" id="newsSynopsis" placeholder="News Synopsis goes here"></textarea>        
             </div>
     
         </form>

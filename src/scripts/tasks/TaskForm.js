@@ -19,20 +19,20 @@ export const taskForm = () => {
 <!-- Modal -->
 <div class="modal fade" id="taskModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
+    <div class="modal-content" style=" background-color: rgba(200, 200, 200, 0.8);">
       <div class="modal-header">Add Task</div>
         <div class="modal-body">
         <form class="taskForm">
-            <div action="taskName">
-            <input id="newTaskName" type="text" placeholder="Task">
+            <div action="taskName" >
+            <input id="newTaskName" type="text" placeholder="Task" style=" background-color: rgba(228, 230, 230, 0.8);">
             </div>
             
             <div action="taskDetails">
-            <textarea name="" id="newTaskDetails" cols="30" rows="10" placeholder="Details"></textarea>
+            <textarea name="" id="newTaskDetails" cols="30" rows="10" placeholder="Details" style=" background-color: rgba(228, 230, 230, 0.8);"></textarea>
             </div>
     
             <div action="newAddDate" class="taskDate">Complete by:
-            <input type="Date" name="Date" id="newTaskDate">        
+            <input type="Date" name="Date" id="newTaskDate" style=" background-color: rgba(228, 230, 230, 0.8);">        
             </div>
     
         </form>

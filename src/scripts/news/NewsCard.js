@@ -33,25 +33,25 @@ export const news = (taco) =>  {
     <!-- Modal -->
 <div class="modal fade" id="newsEditModal-${taco.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
+    <div class="modal-content" style=" background-color: rgba(200, 200, 200, 0.8);">
       <div class="modal-header">Change Article Details</div>
         <div class="modal-body">
         <form class="newsEditForm">
 
         <div action="newsTitle">
-            <input id="newsTitleEdit--${taco.id}" type="text" value="${taco.title}">
+            <input style=" background-color: rgba(228, 230, 230, 0.8);" id="newsTitleEdit--${taco.id}" type="text" value="${taco.title}">
         </div>
 
         <div action="newsUrl">
-            <input name="" type="text" id="newsUrlEdit--${taco.id}" cols="30" rows="10" value="${taco.url}">
+            <input style=" background-color: rgba(228, 230, 230, 0.8);" name="" type="text" id="newsUrlEdit--${taco.id}" cols="30" rows="10" value="${taco.url}">
         </div>
 
         <div action="newsSynopsis">
-            <textarea name="newsSynopsis" id="newsSynopsisEdit--${taco.id}" placeholder="News Synopsis goes here">${taco.synopsis}</textarea>
+            <textarea style=" background-color: rgba(228, 230, 230, 0.8);" name="newsSynopsis" id="newsSynopsisEdit--${taco.id}" placeholder="News Synopsis goes here">${taco.synopsis}</textarea>
         </div>
 
         <div action="newsDateSaved">
-            <input id="newsDateSavedEdit--${taco.id}"  value="${new Date (taco.dateSaved).toLocaleDateString('en-US')}"</input>
+            <input style=" background-color: rgba(228, 230, 230, 0.8);" id="newsDateSavedEdit--${taco.id}"  value="${new Date (taco.dateSaved).toLocaleDateString('en-US')}"</input>
         </div>
 
         <div action="newsDateUpdated">

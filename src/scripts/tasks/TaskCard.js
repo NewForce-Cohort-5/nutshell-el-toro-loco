@@ -27,20 +27,20 @@ export const Task = (task) => {
 <!-- Modal -->
 <div class="modal fade" id="taskEditModal-${task.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
+    <div class="modal-content" style=" background-color: rgba(200, 200, 200, 0.8);">
       <div class="modal-header">Edit Task</div>
         <div class="modal-body">
        
             <div >
-                <input id="taskEditName-${task.id}" type="text" value="${task.taskName}">
+                <input style=" background-color: rgba(228, 230, 230, 0.8);" id="taskEditName-${task.id}" type="text" value="${task.taskName}">
             </div>
             
             <div >
-            <textarea name="" id="taskEditDetails-${task.id}" cols="30" rows="10">${task.taskDetail}</textarea>
+            <textarea name="" style=" background-color: rgb(228, 230, 230, 0.8);" id="taskEditDetails-${task.id}" cols="30" rows="10">${task.taskDetail}</textarea>
             </div>
     
-            <div action="addDate" id="editTaskDate">Complete by:
-                    <input type="Date" name="Date" id="taskEditDate-${task.id}" value="${task.completeBy}">        
+            <div  action="addDate" id="editTaskDate">Complete by:
+                    <input style=" background-color: rgb(228, 230, 230, 0.8);" type="Date" name="Date" id="taskEditDate-${task.id}" value="${task.completeBy}">        
             </div>
     
         
