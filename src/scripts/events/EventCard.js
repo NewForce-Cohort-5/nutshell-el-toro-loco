@@ -28,18 +28,18 @@ export const Event = (events) => {
 
      <div class="modal fade" id="EventEditModality-${events.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
        <div class="modal-dialog modal-dialog-centered">
-         <div class="modal-content">
+         <div class="modal-content" style=" background-color: rgba(200, 200, 200, 0.8);">
            <div class="modal-header">Add Event</div>
              <div class="modal-body">
              <form class="eventForm">
-                 <div action="eventName">
-                    <input id="eventNameChanges-${events.id}" type="text" value="${events.eventName}">
+                 <div  style=" background-color: rgba(228, 230, 230, 0.8);">
+                    <input style=" background-color: rgba(228, 230, 230, 0.8);" id="eventNameChanges-${events.id}" type="text" value="${events.eventName}">
                  </div>
                  <div action="eventLocation">
-                    <input id="eventLocationChanges-${events.id}" type="text" value="${events.eventLocation}">
+                    <input style=" background-color: rgba(228, 230, 230, 0.8);" id="eventLocationChanges-${events.id}" type="text" value="${events.eventLocation}">
                  </div>
                  <div action="addDate" class="addDate">
-                         <input type="Date" name="Date" id="eventDateChanges-${events.id}" value="${events.eventDate}">        
+                         <input style=" background-color: rgba(228, 230, 230, 0.8);" type="Date" name="Date" id="eventDateChanges-${events.id}" value="${events.eventDate}">        
                  </div>
              </form>
            <div class="modal-footer">
