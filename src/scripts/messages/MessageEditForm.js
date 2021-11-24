@@ -25,7 +25,7 @@ export const MessageEditForm = (chatId) => {
     <section class="edit-chat-form">
     <input type="textarea" id="edit-chat-text" value="${messageWeWantToEdit.message}"placeholder="edit message.."></textarea>
     <button id="sendEditedMessage-${chatId}" class="btn btn-primary">Send</button>
-    <button type="cancel" class="btn btn-secondary"  id=cancelButton-${chatId}>Cancel</button>
+    <button type="reset" class="btn btn-secondary"  id=cancelButton-${chatId}>Cancel</button>
     </section>
     `
     
