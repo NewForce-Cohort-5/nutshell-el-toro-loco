@@ -230,17 +230,7 @@ margin-top: 25px;
 }
 
 
-.event-container, .news-container, .task-container{
-    margin: 25px;
-    border: 1px solid black;
-    width: 25%;
-    padding: 15px;
-    height: 700px;
-    overflow-y: auto;
-    background-color: rgb(68, 70, 70, 0.5);
-    
-    
-}
+
 .eventCard, .newsCard, .taskTag{
     padding: 15px 10px 15px 10px,
 
@@ -253,14 +243,14 @@ margin-top: 25px;
 body,
 button,
 input,
-select,
+select, .event-container, .news-container, .task-container, .chat-container,
 textarea {
 	
 	color: black;
 	font-family: "Comfortaa", Arial, sans-serif;
-	font-size: 14px;
+	font-size: 18px;
 	line-height: 1.5;
-	margin: 2px;
+	
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -401,11 +391,11 @@ body {
     position: relative;
     z-index: 1;
     
+    
   }
   
 body:before {
     content: " ";
-    
     position: absolute;
     top: 0; 
     left: 0;
@@ -416,4 +406,18 @@ body:before {
     background: url("https://upload.wikimedia.org/wikipedia/commons/c/c5/El_Toro_Loco_Monster_Truck_Snorting_Smoke.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    
   }
+
+  
+.event-container, .news-container, .task-container{
+    margin: 25px;
+    border: 1px solid black;
+    width: 25%;
+    padding: 15px;
+    height: 700px;
+    overflow-y: auto;
+    background-color: rgb(68, 70, 70, 0.5);
+    
+    
+}
