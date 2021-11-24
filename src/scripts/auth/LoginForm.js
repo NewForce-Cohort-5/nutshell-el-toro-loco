@@ -33,6 +33,7 @@ eventHub.addEventListener("click", e => {
                     document.querySelector(".auth").innerHTML = ""
 
                     // print the page
+                    document.querySelector("#clear-dashboard").classList.remove("hide")
                     Nutshell()
                 } else {
                     window.alert("User does not exist! 😭 Please register.")

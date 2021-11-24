@@ -62,11 +62,10 @@ export const MessageEditForm = (chatId) => {
 
         }
     })
-  
-
     contentTarget.addEventListener("click", e => {
         if(e.target.id.startsWith("cancelButton")){
             MessageForm()
         }
-})}
+    })
+}
 

@@ -46,13 +46,13 @@ margin-top: 25px;
 .eventCard:first-child {
     background-color: lightskyblue;
     display: flex;
-    width: max-content;
+    flex-direction: column;
+    
     font-weight: bold;
     font-size: larger;
     border: 3pt solid;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
 
 .chat-container {
     float: right;
@@ -62,6 +62,7 @@ margin-top: 25px;
     margin-bottom: 25px;
     margin-top: 50%;
     border-radius: 5px;
+    background-color: rgb(68, 70, 70, 0.5);
      
 }
 
@@ -84,6 +85,7 @@ margin-top: 25px;
     overflow-y: auto;
 }
 
+
 .chat-form, .edit-chat-container{
     display: flex;
     margin-top: 10px;
@@ -92,7 +94,7 @@ margin-top: 25px;
 .chat-text, .message-text, .edit-chat-text {
     margin-right: 10px; 
     border-radius: 5px;
-    width: 275px;
+    width: 20vw;
     
 }
 .message-edit{
@@ -220,6 +222,51 @@ margin-top: 25px;
     font-size: 12px
 }
 
+.dashboard{
+    display: flex;
+   height: 100%;
+   width: 98vw;
+    
+}
+
+
+
+.eventCard, .newsCard, .taskTag{
+    padding: 15px 10px 15px 10px,
+
+}
+
+@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
+
+/*Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select, .event-container, .news-container, .task-container, .chat-container,
+textarea {
+	
+	color: black;
+	font-family: "Comfortaa", Arial, sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+	
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Patua One", sans-serif;
+  letter-spacing: 2px;
+  margin: 25px 0;
+}
+
+.btn-primary{
+    margin-bottom: 25px;
+}
+
+.hide{
+    display: none;
+}
+
 .login-space .group .button {
     background: #1161ee
 }
@@ -321,3 +368,56 @@ a {
     color: #b3b3b3
 }
 
+.headerCSS{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.logOutButton{
+ margin-right: 10px;
+ margin-top: 10px;
+}
+
+
+/* body{
+    opacity: 0.75;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c5/El_Toro_Loco_Monster_Truck_Snorting_Smoke.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+body {
+    position: relative;
+    z-index: 1;
+    
+    
+  }
+  
+body:before {
+    content: " ";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 110%;  
+    opacity: .4; 
+    z-index: -1;
+    background: url("https://upload.wikimedia.org/wikipedia/commons/c/c5/El_Toro_Loco_Monster_Truck_Snorting_Smoke.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+
+  
+.event-container, .news-container, .task-container{
+    margin: 25px;
+    border: 1px solid black;
+    width: 25%;
+    padding: 15px;
+    height: 700px;
+    overflow-y: auto;
+    background-color: rgb(68, 70, 70, 0.5);
+    
+    
+}

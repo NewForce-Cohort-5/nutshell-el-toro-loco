@@ -10,7 +10,6 @@ import { MessageList } from "./messages/MessageList.js"
 
 export const Nutshell = () => {
     
-
     LogOutButton();
     showChat();
     MessageList();

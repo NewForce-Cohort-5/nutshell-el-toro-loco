@@ -15,7 +15,7 @@ export const news = (taco) =>  {
     
     return `
     <div class="newsCard" id="${taco.id}">
-    <h3>Title: ${taco.title}</h3>
+    <p>Title: ${taco.title}</p>
     <p><a href=${taco.url} target="_blank" rel="noopener noreferrer"> the article url </a></p>
     <p id="newsDateUpdated-edit">Date of the article saved: ${new Date (taco.dateSaved).toLocaleDateString('en-US')}</p>
 

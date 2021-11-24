@@ -1,6 +1,7 @@
 //author: Akiko Endo --purpose: to print a new-article-button and if a user clicks the button, the info input field will be displayed.  And save data in the field into the database when the user clicked the save button in the input field.
 
 import {saveNews} from "./NewsDataProvider.js"
+import {NewsList} from "./NewsList.js"
 
 
 export const newArticle = () => {
