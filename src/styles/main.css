@@ -62,6 +62,7 @@ margin-top: 25px;
     margin-bottom: 25px;
     margin-top: 50%;
     border-radius: 5px;
+    background-color: rgb(68, 70, 70, 0.5);
      
 }
 
@@ -228,10 +229,6 @@ margin-top: 25px;
     
 }
 
-.news-container{
-   
-}
-
 
 .event-container, .news-container, .task-container{
     margin: 25px;
@@ -240,6 +237,9 @@ margin-top: 25px;
     padding: 15px;
     height: 700px;
     overflow-y: auto;
+    background-color: rgb(68, 70, 70, 0.5);
+    
+    
 }
 .eventCard, .newsCard, .taskTag{
     padding: 15px 10px 15px 10px,
@@ -400,10 +400,12 @@ a {
 body {
     position: relative;
     z-index: 1;
+    
   }
   
 body:before {
     content: " ";
+    
     position: absolute;
     top: 0; 
     left: 0;
