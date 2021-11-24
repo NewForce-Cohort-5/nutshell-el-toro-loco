@@ -83,11 +83,15 @@ eventHub.addEventListener("click", (event) => {
     // document.querySelector(`#taskEditDetails`).value = ""
     // document.querySelector(`#taskEditDate`).value = ""
     
+    if ( editedTask.taskName === '' ||  editedTask.taskDetail === '' ||  editedTask.completeBy === '') {
+      alert('Please enter valid values')}
+   else{
+
     console.log(editedTask)
     
     //Send new form to json server and refresh task list
     updateTask(editedTask)
-    .then(taskList)
+    .then(taskList)}
   }
 })
 

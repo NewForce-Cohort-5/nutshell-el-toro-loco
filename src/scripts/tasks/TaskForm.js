@@ -82,9 +82,15 @@ newTaskHub.addEventListener("click", clickEvent => {
       completeBy: document.querySelector(`#newTaskDate`).value,
       complete: false
     }
+
+
+    if ( newTask.taskName === '' ||  newTask.taskDetail === '' ||  newTask.completeBy === '') {
+      alert('Please enter valid values') }
+   else{
     console.log(newTask)
     saveTask(newTask)
     .then(taskList)
+   }
   }
 })
 
