@@ -23,7 +23,7 @@ export const EventList = () => {
        //css selector first child
         contentTarget.innerHTML = 
         `
-    <h3>Events</h3>
+    <h3>Events</h3><br>
     
     <div class = "eventList"> ${EventsHTML} </div>
     ` 

@@ -1,5 +1,5 @@
 //Author: Nick
-//Purpose:
+//Purpose: Prints the cards to the dom. Only prints the ones for current user.
 
 import { getTasks, useTasks } from "./TaskDataProvider.js";
 import { Task } from "./TaskCard.js";
@@ -27,6 +27,7 @@ export const taskList = () => {
             
         }})
         contentTarget.innerHTML = `
+        <h3>Tasks</h3><br>
         ${taskHTML}
         `
     })

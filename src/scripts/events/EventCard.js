@@ -7,7 +7,7 @@ import { useEvents } from "./EventDataProvider.js"
 import { updateEvent } from "./EventDataProvider.js"
 
 //do i need two parameters here, one to get the events data and one to get the users id or will it be able to tie userid back to id?
-{/* <button class="formButton" id="edit-${events.id}">Edit</button> */}
+/* <button class="formButton" id="edit-${events.id}">Edit</button> */
 
 
 // const contentTarget = document.querySelector(".event-list")
@@ -19,6 +19,7 @@ export const Event = (events) => {
            <div class="event-name">${events.eventName}</div>
            <div class="event-date">${events.eventDate}</div>
            <div class="event-location">${events.eventLocation}</div>
+
     </section>
 
     <button type="button" class="btn btn-primary" id="EventEditModal--${events.id}" data-bs-toggle="modal" data-bs-target="#EventEditModality-${events.id}">
