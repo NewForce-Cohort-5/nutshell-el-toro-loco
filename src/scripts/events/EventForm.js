@@ -48,18 +48,18 @@ export const EventForm = () => {
      
      <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
        <div class="modal-dialog modal-dialog-centered">
-         <div class="modal-content">
-           <div class="modal-header">Add Task</div>
+         <div class="modal-content" style=" background-color: rgba(200, 200, 200, 0.8);">
+           <div class="modal-header">Add Event</div>
              <div class="modal-body">
              <form class="eventForm">
                  <div action="eventName">
-                     <input id="eventName" type="text" placeholder="Enter the name of your event here">
+                     <input id="eventName" type="text" placeholder="Enter the name of your event here" style=" background-color: rgba(228, 230, 230, 0.8);">
                  </div>
                  <div action="eventLocation">
-                 <textarea name="" id="eventLocation" placeholder="Enter the location of your event here"></textarea>
+                 <textarea name="" id="eventLocation" placeholder="Enter the location of your event here" style=" background-color: rgba(228, 230, 230, 0.8);"></textarea>
                  </div>
                  <div action="addDate" class="addDate" id="Date">Select the date of your event
-                         <input type="Date" name="Date" id="eventDate">        
+                         <input type="Date" name="Date" id="eventDate" style=" background-color: rgba(228, 230, 230, 0.8);">        
                  </div>
              </form>
            <div class="modal-footer">
