@@ -422,6 +422,10 @@ body:before {
     
 }
 
+.header-image {
+    height: auto;
+    width: 15%;
+}
 .header-image:hover {
     /* Start the shake animation and make the animation last for 0.5 seconds */
     animation: shake 0.5s;
@@ -442,4 +446,4 @@ body:before {
     80% { transform: translate(-1px, -1px) rotate(1deg); }
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
-  }
+ 
